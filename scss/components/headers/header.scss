@@ -1,0 +1,17 @@
+.header {
+    width: 100%;
+
+// Header 1
+    &__1 {
+        height: 46px;
+        background-color: $main-color;
+        line-height: normal;
+        @include header1-font;
+    }
+// Header 2
+    &__2 {
+        height: 70px;
+        background-color: #fff;
+        box-shadow: 0px 4px 20px 0px rgba(0, 7, 94, 0.10);
+    }
+}
