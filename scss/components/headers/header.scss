@@ -20,11 +20,6 @@
 
         }
 
-        &__links {
-            display: flex;
-            margin-top: 10px;
-        }
-
         &__contact-email {
             display: flex;
             margin-right: 44px;
@@ -42,6 +37,11 @@
             margin-right: 9px;
         }
 
+        &__links {
+            display: flex;
+            margin-top: 10px;
+        }
+
         &__link_tg {
             margin-right: 18px;
         }
@@ -51,5 +51,80 @@
         height: 70px;
         background-color: #fff;
         box-shadow: 0px 4px 20px 0px rgba(0, 7, 94, 0.10);
+        
+        &__circle-btn {
+        @extend %circle-button;
+        }
+
+        &__container {
+            position: relative;
+        }
+
+        &__nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &__name {
+            color: $main-gradient;
+
+            font-family: Nunito Sans;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: normal;
+            text-transform: uppercase;
+            background-image: $main-gradient;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            margin-right: 58px;
+
+        }
+
+        &__menu {
+            display: flex;
+
+            color: #303239;
+            font-family: Nunito Sans;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            padding: 0;
+            margin-right: 47px;
+
+            li:not(:last-child) {
+                margin-right: 40px;
+            }
+
+        }
+
+        &__menu-catalog {
+            display: flex;
+            align-items: center;
+        }
+
+        &__menu-svg {
+            margin-left: 8px;
+        }
+
+        &__btn {
+            margin: 15px 80px 15px 0;
+            @include button-gradient(11px 27px, 13px) 
+        }
+
+        &__small-btns {
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        &__circle-btn:not(:last-child) {
+            margin-right: 10px;
+        }
     }
+
+    
 }

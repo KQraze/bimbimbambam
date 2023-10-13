@@ -6,3 +6,20 @@
     font-weight: 400;
     line-height: normal;
 }
+
+@mixin button-gradient($padding, $font-size) {
+    display: inline-flex;
+    padding: $padding;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background: linear-gradient(74deg, #0D748B -10.13%, #1A0B73 75.49%), #FFF;
+    border: none;
+    
+    color: #FFF;
+    font-family: Nunito Sans;
+    font-size: $font-size;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
