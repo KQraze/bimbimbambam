@@ -2,14 +2,52 @@
     width: 100%;
 
 // Header 1
-    &__1 {
+    &1 {
         height: 46px;
         background-color: $main-color;
-        line-height: normal;
         @include header1-font;
+
+        &__container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &__contacts {
+            display: flex;
+            margin-top: 14px;
+
+        }
+
+        &__links {
+            display: flex;
+            margin-top: 10px;
+        }
+
+        &__contact-email {
+            display: flex;
+            margin-right: 44px;
+        }
+
+        &__contact-phone {
+            display: flex;
+        }
+
+        &__contact-email_icon {
+            margin-right: 10px;
+        }
+
+        &__contact-phone_icon {
+            margin-right: 9px;
+        }
+
+        &__link_tg {
+            margin-right: 18px;
+        }
     }
 // Header 2
-    &__2 {
+    &2 {
         height: 70px;
         background-color: #fff;
         box-shadow: 0px 4px 20px 0px rgba(0, 7, 94, 0.10);
