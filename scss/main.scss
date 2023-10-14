@@ -1,6 +1,7 @@
 @import "./common";
 @import "./components/headers";
 @import "./components/main/banner";
+@import "./components/main/category";
 
 // дефолт настройки
 body {
@@ -30,5 +31,9 @@ body {
     ul, li {
         list-style-type: none;
     }
+}
+
+main {
+    width: 100%;
 }
 

@@ -1,0 +1,81 @@
+.category {
+    height: 449px;
+    
+    &__h1 {
+        @include upper-text(36px, $main-color)
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows:  170px 170px;
+        gap: 20px;
+    }
+
+    &__block {
+        overflow: hidden;
+        position: relative;
+        width: 380px;
+        height: 170px;
+        flex-shrink: 0;
+        border-radius: 10px;
+        background: #FFF;
+        box-shadow: 0px 4px 20px 0px rgba(0, 7, 94, 0.10);
+
+        &-circle {
+            position: absolute;
+            left: 0px;
+            z-index: 0;
+        }
+
+        &-image {
+            position: absolute;
+            left:35px;
+            top: 20px;
+            bottom: 20px;
+        }
+
+        &-name {
+            position: absolute;
+            top: 30px;
+            right: 32px;
+            
+            display: block;
+            width: 153px;
+            height: 70px;
+            
+            color:#303239;
+            font-family: Nunito Sans;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 130%; /* 23.4px */
+        }
+
+        &-catalog {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            
+            display: flex;
+            flex-direction: row;
+
+            margin: 0 65px 30px 0;
+
+            &-name {
+                @include catalog-text($main-color);
+                margin-right: 10px;
+            }
+
+            &-arrow {
+                width: 30px;
+                flex-shrink: 0;
+
+                fill: #18154B;
+                stroke-width: 1.5px;
+                stroke: #18154B;
+            }
+
+        }
+    }
+}
