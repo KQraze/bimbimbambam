@@ -2,6 +2,7 @@
 @import "./components/headers";
 @import "./components/main/banner";
 @import "./components/main/category";
+@import "./components/main/advantages/";
 
 // дефолт настройки
 body {
@@ -35,5 +36,11 @@ body {
 
 main {
     width: 100%;
+}
+
+@include desktop {
+    main {
+        
+    }
 }
 

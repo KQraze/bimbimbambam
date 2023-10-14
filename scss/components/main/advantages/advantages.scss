@@ -1,0 +1,105 @@
+.advantages {
+    position: relative;
+    width: $content-width-desktop;
+    height: 374px;
+    flex-shrink: 0;
+
+    border-radius: 10px;
+    background: radial-gradient(130.91% 98.19% at -8.58% -1.44%, #42E8E0 0%, #40DDDA 1.57%, #3AAEC0 9.21%, #3484A9 17.3%, #2F6195 25.73%, #2B4486 34.58%, #282E79 44%, #180564 82.26%);
+
+    box-shadow: 0px 4px 20px 0px rgba(0, 7, 94, 0.10);
+    margin-bottom: 80px;
+
+    &__under {
+
+        &-viduha {
+            position: absolute;
+            display: flex;
+            width: 318px;
+            height: 330px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+
+            bottom: 15px;
+            left: 55px;
+        }
+
+        &-grid {
+            position: absolute;
+        }
+
+    }
+
+    &__name {
+        display: block;
+        width: 341px;
+
+        position: absolute;
+
+        top: 50px;
+        left: 60px;
+        
+        @include upper-text(36px, #FFF);
+    }
+
+    &__grid {
+        position: absolute;
+        top: 50px;
+        right: 41px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        row-gap: 40px;
+        column-gap: 64px;
+        
+
+    }
+
+    &__text {
+
+        &_1 {
+            @include advantages-text(147px);
+            
+        }
+        &_2 {
+            @include advantages-text(176px);
+            
+        }
+        &_3 {
+            @include advantages-text(122px);
+            
+        }
+        &_4 {
+            @include advantages-text(176px);
+            
+        }
+        &_5 {
+            @include advantages-text(148px);
+            
+        }
+        &_6 {
+            @include advantages-text(135px);
+            
+        }
+    }
+
+
+
+    &__frame {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background: rgba(52, 110, 164, 0.20);
+        box-shadow: 0px 4px 40px rgba(0, 6, 84, 0.90);
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        flex-shrink: 0;
+
+        margin-bottom: 10px;
+    }
+
+
+}

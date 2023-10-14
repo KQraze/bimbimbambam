@@ -39,6 +39,9 @@
         }
 
         &_name {
+            display: block;
+            width: 341px;
+            
             @include upper-text(38px, #FFF);
             margin-bottom: 20px;
         }
