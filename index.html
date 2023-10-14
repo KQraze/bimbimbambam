@@ -9,61 +9,131 @@
 <body>
     <header class="header">
 
-        <div class="header1">
+        <section class="header1">
             <div class="container header1__container">
 
                 <div class="header1__contacts">
 
                     <div class="header1__contact-email">
-                        <img src="/images/email.svg" class="header1__contact-email_icon" alt="email" width="16px" height="16px">
+                        <img src="/images/headers/email.svg" class="header1__contact-email_icon" alt="email" width="16px" height="16px">
                         <span class="header1__contact-email_text">mein@miner.com</span>
                     </div>
                     
                     <div class="header1__contact-phone">
-                        <img src="/images/phone.svg" class="header1__contact-phone_icon" alt="phone" width="16px" height="16px">
+                        <img src="/images/headers/phone.svg" class="header1__contact-phone_icon" alt="phone" width="16px" height="16px">
                         <span class="header1__contact-phone_text">+7 (999) 999-99-99</span>
 
                     </div>
                 </div>
 
                 <div class="header1__links">
-                    <a href="#"><img src="/images/telegram.svg" class="header1__link_tg" alt="telegram" width="26px" height="26px"></a>
-                    <a href="#"><img src="/images/whatsapp.svg" class="header1__link_wsp" alt="whatsapp" width="26px" height="26px"></a>
+                    <a href="#"><img src="/images/headers/telegram.svg" class="header1__link_tg" alt="telegram" width="26px" height="26px"></a>
+                    <a href="#"><img src="/images/headers/whatsapp.svg" class="header1__link_wsp" alt="whatsapp" width="26px" height="26px"></a>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="header2">
+        <section class="header2">
             <div class="container header2__container">
 
                 <nav class="header2__nav">
                     <span class="header2__name">MEIN MINER</span>
                     <ul class="header2__menu">
-                        <li class="header2__menu-catalog">Каталог товаров <img class="header2__menu-svg" src="/images/vector.svg" alt="Вектор" width="10px" height="5px"></li>
-                        <li>Цены</li>
-                        <li>Калькулятор</li>
-                        <li>Доставка</li>
-                        <li>Отзывы</li>
+                        <a href=""><li class="header2__menu-catalog">Каталог товаров<img class="header2__menu-svg" src="/images/headers/vector.svg" alt="Вектор" width="10px" height="5px"></li></a>
+                        <a href=""><li>Цены</li></a>
+                        <a href=""><li>Калькулятор</li></a>
+                        <a href=""><li>Доставка</li></a>
+                        <a href=""><li>Отзывы</li></a>
                     </ul>
                     <button class="header2__btn">Заказать звонок</button>
                     <ul class="header2__small-btns">
 
-                        <li class="header2__circle-btn">
-                            <img src="/images/charm_search.svg" alt="charm_search">
+                       <li class="header2__circle-btn"><a href="#">
+                            <img src="/images/headers/charm_search.svg" alt="charm_search"></a>
                         </li>
 
-                        <li class="header2__circle-btn">
-                            <img src="/images/heart.svg" alt="heart">
+                        <li class="header2__circle-btn"><a href="#">
+                            <img src="/images/headers/heart.svg" alt="heart">
+                            <img src="/images/headers/ellipse.svg" alt="ellipse" class="header2__circle" width="18px" height="18px">
+                            <span class="header2__circle_num">6</span></a>
                         </li>
 
-                        <li class="header2__circle-btn">
-                            <img src="/images/Cart2.svg" alt="Cart2">
+                        <li class="header2__circle-btn"><a href="#">
+                            <img src="/images/headers/Cart2.svg" alt="Cart2">
+                            <img src="/images/headers/ellipse.svg" alt="ellipse" class="header2__circle" width="18px" height="18px">
+                            <span class="header2__circle_num">3</span></a>
                         </li>
                     </ul>
                 </nav>
-
             </div>
-        </div>
+        </section>
     </header>
+    <main>
+        <article class="container">
+            <section class="banner">
+
+                <div class="banner__block1">
+
+                    <div class="banner__block1_under">
+                        <img src="/images/main/banner/img.png" alt="Схема" class="banner__block1_schema">
+                        <div class="banner__block1_circle"></div>
+                    </div>
+
+                    <div class="banner__block1_info">
+                        <div class="banner__block1_name">
+                        Оборудование <br>для майнинга <br> оптом
+                    </div>
+
+                    <div class="banner__block1_desc">
+                        с гарантией 12 месяцев
+                    </div>
+
+                    <button class="banner__block1_btn">
+                        Перейти в каталог
+                    </button>
+
+                    </div>
+                    <img src="/images/main/banner/image.png" alt="Оборудование" class="banner__block1_img" width="263px" height="250px">
+                    
+                    <div class="banner__block1_slider">
+                        <img src="/images/main/banner/bright-ellipse.svg" alt="ellipse1" width="12px" height="12px">
+                        <img src="/images/main/banner/ellipse.svg" alt="ellipse2" width="10px" height="10px">
+                        <img src="/images/main/banner/ellipse.svg" alt="ellipse3" width="10px" height="10px">
+                        <img src="/images/main/banner/ellipse.svg" alt="ellipse4" width="10px" height="10px">
+                    </div>
+
+                </div>
+
+                <div class="banner__block2">
+                    <div class="banner__block2_under">
+                        <div class="banner__block2-blur_1"></div>
+                        <div class="banner__block2-blur_2"></div>
+                    </div>
+
+                    <div class="banner__block2_info">
+
+                        <div class="banner__block2_name">
+                            Выгодное <br> предложение
+                        </div>
+
+                        <div class="banner__block2_desc">
+                            <span class="banner__block2_desc-perc">-20%</span>
+                            <span class="banner__block2_desc-text">на все товары <br> Antminer</span>
+                        </div>
+                    </div>
+
+                    <img src="/images/main/banner/banner2.svg" alt="bitcoin" class="banner__block2_bitcoin" width="216px" height="200px">
+                    
+                    <a href=""><div class="banner__block2_catalog">
+                        <span class="banner__block2_text">В каталог</span>
+                        <img src="/images/main/banner/arrow.svg" alt="arrow" width="30px">
+                    </div></a>
+                    
+                </div>
+            </section>
+
+            
+        </article>
+    </main>
 </body>
 </html>

@@ -1,0 +1,176 @@
+main {
+    width: 100%;
+}
+// Баннеры
+.banner {
+    display: grid;
+    grid-template-columns: 780px 380px;
+    gap: 20px;
+    grid-row: 440px;
+    margin: 40px 0 80px 0;
+// Баннер 1
+
+    &__block1 {
+        height: 440px;
+        position: relative;
+        flex-shrink: 0;
+        border-radius: 10px;
+        box-shadow: 0px 4px 20px 0px rgba(0, 7, 94, 0.10);
+        background: linear-gradient(74deg, #0D748B -10.13%, #1A0B73 75.49%), #FFF;;
+        overflow: hidden;
+
+        &_schema {
+            position: absolute;
+        }
+
+        &_circle {
+            position: absolute;
+            margin: 0 0 0 552px;
+            top: -62px;
+            width: 596px;
+            height: 563px;
+            flex-shrink: 0;
+            border-radius: 596px;
+            background: rgba(52, 110, 164, 0.20);
+        }
+        
+
+        &_info {
+            position: absolute;
+            margin: 80px 0 0 57px;
+
+        }
+
+        &_name {
+            @include upper-text(38px, #FFF);
+            margin-bottom: 20px;
+        }
+
+        &_desc {
+            color: #FFF;
+            font-family: Nunito Sans;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            margin-bottom: 30px;
+        }
+
+        &_btn {
+            @include white-btn(15px 31px 15px 32px);
+        }
+
+        &_img {
+            position: absolute;
+            margin: 95px 45px 95px 472px;
+        }
+
+        &_slider {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+
+            margin: 0 30px 30px 0;
+
+        }
+    }
+// Баннер 2
+    &__block2 {
+        position: relative;
+        overflow: hidden;
+
+        border-radius: 10px;
+        box-shadow: 0px 4px 20px 0px rgba(0, 7, 94, 0.10);
+        background: linear-gradient(0deg, #1A0B73 0%, #1A0B73 100%), radial-gradient(171.82% 119.39% at -6.32% -2.5%, #42E8E0 0%, #40DDDA 0%, #3AAEC0 9.21%, #3484A9 17.3%, #2F6195 25.73%, #2B4486 34.58%, #282E79 44%, #261E71 54.25%, #24156C 65.94%, #24126A 82.26%);
+        
+        &_info {
+            position: absolute;
+            margin: 40px 0 0 40px;
+        }
+
+        &_name {
+            @include upper-text(28px, #fff);
+            margin-bottom: 10px;
+        }
+
+        &_desc {
+            display: flex;
+            align-items: center;
+            margin: 0;
+        }
+
+        &_desc-perc {
+            color: #FFF;
+            font-family: Nunito Sans;
+            font-size: 56px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            text-transform: uppercase;
+
+            margin-right: 20px;
+        }
+
+        &_desc-text {
+            color: #FFF;
+            font-family: Nunito Sans;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 125%;
+        }
+
+        &_bitcoin {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            margin: 0 0 23px 8px;
+        }
+
+        &_catalog {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            margin: 0 30px 30px 0;
+            display: flex;
+            flex-direction: row;
+            stroke-width: 1.5px;
+        }
+
+        &_text {
+            @include catalog-text(white);
+            margin-right: 10px;
+        }
+
+        &-blur_1 {
+            position: absolute;
+            width: 365px;
+            height: 365px;
+            flex-shrink: 0;
+            border-radius: 365px;
+            background: #3BB9C6;
+            filter: blur(73px);
+
+            left: -232px;
+            top: -223px;
+        }
+
+        &-blur_2 {
+            position: absolute;
+            width: 365px;
+            height: 365px;
+            flex-shrink: 0;
+            border-radius: 365px;
+            background: #3BB9C6;
+            filter: blur(73px);
+
+            right: -218px;
+            bottom: -247px;
+
+        }
+    }
+}

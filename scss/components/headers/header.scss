@@ -1,5 +1,8 @@
 .header {
     width: 100%;
+    position: sticky; 
+    top: 0;
+    z-index: 999999;
 
 // Header 1
     &1 {
@@ -23,18 +26,26 @@
         &__contact-email {
             display: flex;
             margin-right: 44px;
+
+            &_icon {
+                margin-right: 10px;
+            }
+
+            &_text {
+                color: white;
+            }
         }
 
         &__contact-phone {
             display: flex;
-        }
 
-        &__contact-email_icon {
-            margin-right: 10px;
-        }
+            &_icon {
+                margin-right: 9px;
+            }
 
-        &__contact-phone_icon {
-            margin-right: 9px;
+            &_text {
+                color: white;
+            }
         }
 
         &__links {
@@ -95,8 +106,14 @@
             padding: 0;
             margin-right: 47px;
 
-            li:not(:last-child) {
+            li {transition: all 0.2s ease-in-out;}
+
+            a:not(:last-child) {
                 margin-right: 40px;
+            }
+
+            li:hover {
+                color: rgba(48, 50, 57, 0.70);
             }
 
         }
@@ -112,7 +129,7 @@
 
         &__btn {
             margin: 15px 80px 15px 0;
-            @include button-gradient(11px 27px, 13px) 
+            @include button-gradient(11px 27px, 13px);
         }
 
         &__small-btns {
@@ -121,10 +138,31 @@
             padding: 0;
         }
 
+        &__circle-btn {
+            position: relative;
+        }
+
         &__circle-btn:not(:last-child) {
             margin-right: 10px;
         }
+
+        &__circle {
+            position: absolute;
+            top: -6px;
+            right: -6px;
+
+            &_num {
+                position: absolute;
+                top:-3px;
+                right: 0;
+                color: #FFF;
+                font-family: Inter;
+                font-size: 10px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+            }
+        }
     }
 
-    
 }

@@ -1,13 +1,16 @@
 @import "./common";
 @import "./components/headers";
+@import "./components/main/banner";
 
 // дефолт настройки
 body {
     margin: 0;
     padding: 0;
+    background-color: #F0F5FB;
 
     * {
         box-sizing: border-box;
+        color: black;
     }
 
     a {
