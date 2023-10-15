@@ -1,0 +1,66 @@
+.contact {
+    position: relative;
+    height: 365px;
+    width: 100%;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+
+    &__name {
+        @include upper-text(36px, $main-color);
+        margin-bottom: 40px;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+
+        &-data {
+            display: flex;
+            align-items: start;
+            color: #303239;
+            font-family: Nunito Sans;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 145%; /* 26.1px */
+        }
+
+        &-data:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        &-img {
+            margin-top: 5px;
+            margin-right: 10px;
+        }
+
+        &-links {
+            display: flex;
+            margin-top: 40px;
+
+            &1 {
+                margin-right: 20px;
+            }
+        }
+    }
+
+    &__map {
+        position: relative;
+        width: 680px;
+        height: 365px;
+        flex-shrink: 0;
+        border-radius: 10px;
+        background: url('/images/main/contacts/map.svg'), lightgray 0px -23px / 100% 106.849% no-repeat;
+        box-shadow: 0px 4px 20px 0px rgba(0, 7, 94, 0.10);
+
+        &-loc {
+            position: absolute;
+            width: 22px;
+            height: 32px;
+            top: 115px;
+            right: 306px;
+        }
+    }
+}

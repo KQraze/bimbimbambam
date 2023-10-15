@@ -55,6 +55,7 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    cursor: pointer;
 
     display: inline-flex;
     padding: $padding;
@@ -116,4 +117,43 @@
     background-image: $main-gradient;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+@mixin company-desc {
+    color: #303239;
+    font-family: Nunito Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 145%; /* 23.2px */
+}
+
+@mixin footer-utext {
+    color: #B8B8B8;
+    font-family: Nunito Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.32px;
+    text-transform: uppercase;
+}
+
+@mixin footer-text($color) {
+    color: $color;
+    font-family: Nunito Sans;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    transition: all 0.2s ease-in-out;
+    &:not(:last-child) {
+        margin-bottom: 8px;
+    }
+
+    cursor: pointer;
+
+    &:hover {
+        color: #a1a1a1;
+    }
 }

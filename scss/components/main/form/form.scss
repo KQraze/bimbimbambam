@@ -1,0 +1,151 @@
+.app {
+    position: relative;
+    overflow: hidden;
+    height: 330px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px 0px rgba(0, 7, 94, 0.10);
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0 0 60px;
+    background:  url('/images/main/form/bg\ image.png');
+    margin-bottom: 80px;
+
+    &__all {
+        position: absolute;
+    }
+
+    &__under {
+        position: absolute;
+        bottom: -167px;
+        left: -138px;
+        width: 284px;
+        height: 284px;
+        flex-shrink: 0;
+        border-radius: 284px;
+        background: #3BB9C6;
+        filter: blur(94px);
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+
+        &-1 {
+            @include upper-text(28px, white);
+            margin-bottom: 5px;
+        }
+
+        &-2 {
+            @include upper-text(28px, white);
+            margin-bottom: 10px;
+        }
+
+        &-desc {
+            color: #FFF;
+            font-family: Nunito Sans;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            margin-bottom: 25px;
+        }
+    }
+
+    &__inputs {
+        display: flex;
+
+    }
+
+    &__form {
+
+        display: flex;
+        flex-direction: column;
+
+        input {
+            color: #F3F3F3;
+            font-family: Nunito Sans;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 135%; /* 18.9px */
+        }
+
+        input::-moz-placeholder { color: #F3F3F3; }
+        input::-webkit-input-placeholder { color: #F3F3F3; }
+
+        &-input {
+            display: flex;
+            margin-right: 20px;
+            width: 240px;
+            padding: 16px 0 15px 20px;
+            align-items: center;
+            border-radius: 50px;
+            border: 1px solid rgba(243, 243, 243, 0.70);
+            outline: none;
+            caret-color: white;
+
+            background: rgba(255, 255, 255, 0.30);
+
+            &:active {
+                background: rgba(255, 255, 255, 0.50);
+                border: 1px solid #F3F3F3;
+                
+            }
+
+            &:focus {
+                background: rgba(255, 255, 255, 0.50);
+            }
+
+            
+        }
+
+        &-label {
+            color: #F3F3F3;
+            font-family: Nunito Sans;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+
+            &_u {
+                text-decoration: underline;
+            }
+        }
+
+
+        &-btn {
+            @include white-btn(15px 81px 15px 80px)
+        }
+
+        input[type="checkbox"] {
+            display: none;
+          }
+          
+          /* стили для метки */
+          label {
+              cursor: pointer;
+          }
+          
+          /* формируем внешний вид чекбокса в псевдоэлементе before */
+          label:before {
+            color: #000;
+            margin-right: 10px;
+            
+            border-image: initial;
+            content: url('/images/main/form/checkboxd.svg');
+          }
+          
+          /* вариации внешнего вида в зав-ти от статуса checkbox */
+          /* checked */
+          input:checked + label:before {
+            content: url('/images/main/form/checkbox.svg');
+          }
+          /* disabled */
+          input:disabled + label:before {
+            content: url('/images/main/form/checkboxd.svg');
+          }
+
+
+    }
+}

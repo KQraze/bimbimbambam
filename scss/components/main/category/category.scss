@@ -3,7 +3,8 @@
     margin: 0 0 80px 0;
     
     &__h1 {
-        @include upper-text(36px, $main-color)
+        @include upper-text(36px, $main-color);
+        margin-bottom: 40px;
     }
 
     &__grid {

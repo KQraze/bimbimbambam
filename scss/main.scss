@@ -1,9 +1,14 @@
 @import "./common";
 @import "./components/headers";
+@import "./components/footer/footer/";
 @import "./components/main/banner";
 @import "./components/main/category";
 @import "./components/main/advantages/";
 @import "./components/main/hits/";
+@import "./components/main/company/";
+@import "./components/main/form/";
+@import "./components/main/contacts/";
+
 
 // дефолт настройки
 body {
@@ -32,6 +37,10 @@ body {
 
     ul, li {
         list-style-type: none;
+    }
+
+    h1 {
+        margin: 0;
     }
 }
 
