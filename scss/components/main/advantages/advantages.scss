@@ -1,4 +1,5 @@
 .advantages {
+    overflow: hidden;
     position: relative;
     width: $content-width-desktop;
     height: 374px;
@@ -28,6 +29,18 @@
 
         &-grid {
             position: absolute;
+        }
+
+        &-circle {
+            position: absolute;
+            right: -277px;
+            bottom: -369px;
+            width: 511px;
+            height: 511px;
+            flex-shrink: 0;
+            border-radius: 511px;
+            background: #3BB9C6;
+            filter: blur(94px);
         }
 
     }

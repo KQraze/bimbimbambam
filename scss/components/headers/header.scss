@@ -8,7 +8,7 @@
     &1 {
         height: 46px;
         background-color: $main-color;
-        @include header1-font;
+        @include header1-font(#F0F5FB, 400);
 
         &__container {
             display: flex;
@@ -78,17 +78,8 @@
         }
 
         &__name {
-            color: $main-gradient;
-
-            font-family: Nunito Sans;
-            font-size: 20px;
-            font-style: normal;
-            font-weight: 800;
-            line-height: normal;
+            @include gradient-text(20px);
             text-transform: uppercase;
-            background-image: $main-gradient;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
 
             margin-right: 58px;
 

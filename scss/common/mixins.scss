@@ -1,9 +1,9 @@
-@mixin header1-font {
-    color: #F0F5FB;
+@mixin header1-font($color, $font-weight) {
+    color: $color;
     font-family: Nunito Sans;
     font-size: 14px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: $font-weight;
     line-height: normal;
 }
 
@@ -15,6 +15,7 @@
     border-radius: 50px;
     background: linear-gradient(74deg, #0D748B -10.13%, #1A0B73 75.49%), #FFF;
     border: none;
+    cursor: pointer;
     
     color: #FFF;
     font-family: Nunito Sans;
@@ -103,4 +104,16 @@
     font-weight: 600;
     line-height: normal;
     width: $width;
+}
+
+@mixin gradient-text($font-size) {
+    color: $main-gradient;
+    font-family: Nunito Sans;
+    font-size: $font-size;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    background-image: $main-gradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }

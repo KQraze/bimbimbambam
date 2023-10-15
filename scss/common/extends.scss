@@ -9,5 +9,12 @@
 
     border-radius: 30px;
     background-color: #F0F5FB;
+    cursor: pointer;
 
+}
+
+%slider-circle {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
 }

@@ -1,0 +1,148 @@
+// Хиты продаж
+.hits {
+    position: relative;
+    margin-bottom: 80px;
+
+    &__name {
+        @include upper-text(36px, $main-color);
+        margin-bottom: 40px;
+    }
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(5, 220px);
+        gap: 20px;
+        grid-template-rows: 360px;
+
+        margin-bottom: 30px;
+    }
+
+    &__cart {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 10px;
+        background: #FFF;
+        box-shadow: 0px 4px 20px 0px rgba(0, 7, 94, 0.10);
+    }
+
+    &__slider {
+        @extend %slider-circle;
+        margin-left: 50%;
+        transform:translate(-50%);
+    }
+
+    &__sale {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+
+        display: inline-flex;
+        height: 22px;
+        padding: 3px 10px;
+        align-items: flex-start;
+        gap: 10px;
+        flex-shrink: 0;
+        border-radius: 4px;
+        background: #F0F5FB;
+
+        &-text {
+            @include gradient-text(12px);
+        }
+    }
+
+    &__like {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        display: flex;
+        width: 22px;
+        height: 22px;
+        padding: 1px;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        border-radius: 30px;
+        cursor: pointer;
+    }
+
+    &__product-img {
+        margin: 0px 30px 10px 30px;
+    }
+
+    &__info {
+        position: relative;
+        display: flex;
+        margin: 0 20px 0px 20px;
+        flex-direction: column;
+
+        &-name {
+            @include header1-font(#303239, 600);
+            margin-bottom: 6px;
+        }
+
+        &-status {
+            display: flex;
+            align-items: center;
+
+            &-name {
+                margin-left: 8px;
+                color: #9B9B9B;
+                font-family: Nunito Sans;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+            }
+        }
+
+        &-price {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__busket {
+        display: flex;
+        width: 36px;
+        height: 36px;
+        padding: 9px;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        border-radius: 30px;
+        background:#F0F5FB;
+        cursor: pointer;
+
+        &-dark {
+            background: linear-gradient(74deg, #0D748B -10.13%, #1A0B73 75.49%), #FFF;
+        }
+    }
+
+    &__price {
+        @include header1-font(#303239, 700);
+        margin-right: 8px;
+
+        &-block {
+            display: flex;
+            align-items: center;
+        }
+
+        &-sale {
+            color: #9B9B9B;
+            font-family: Nunito Sans;
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            text-decoration: line-through;
+        }
+    }
+
+    &__cart-btn {
+        @include button-gradient(13px 35px 12px 36px, 14px);
+    }
+ }
