@@ -1,0 +1,60 @@
+@include mobile {
+    .category {
+        height: 950px;
+        margin: 0 0 80px 0;
+        
+        &__h1 {
+            @include upper-text(22px, $main-color);
+            margin-bottom: 40px;
+        }
+    
+        &__grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(5, 140px);
+            row-gap: 10px;
+        }
+    
+        &__block {
+            width: 300px;
+            height: 140px;
+            background: url(/images/main/category/mobile/ellipse.svg) no-repeat, #FFF;
+    
+            &-info {
+                display: flex;
+                flex-direction: column;
+                margin-top: 20px;
+            }
+    
+            &-image {
+                width: 110px;
+                height: 102px;
+                margin: 19px 10px 0 20px;
+            }
+    
+            &-name {
+                width: 140px;
+                height: 65px;
+                font-size: 16px;
+            }
+    
+            &-catalog {
+                display: flex;
+                flex-direction: row;
+                margin-top: 18px;
+    
+                &-name {
+                    @include catalog-text($main-color, 14px);
+                    margin-right: 8px;
+                }
+    
+                &-arrow {
+                    width: 20px;
+                    flex-shrink: 0;
+                    stroke-width: 1px;
+                }
+    
+            }
+        }
+    }
+}

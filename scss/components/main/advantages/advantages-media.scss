@@ -1,0 +1,91 @@
+@include mobile {
+    .advantages {
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        padding: 30px 0 0 30px;
+    
+        width: $content-width-mobile;
+        height: 818px;
+        flex-shrink: 0;
+    
+        border-radius: 10px;
+        background: url(/images/main/advantages/mobile/ellipse.svg) no-repeat,url(/images/main/advantages/mobile/svg.svg) no-repeat, url('/images/main/advantages/mobile/vector.svg') no-repeat, radial-gradient(130.91% 98.19% at -8.58% -1.44%, #42E8E0 0%, #40DDDA 1.57%, #3AAEC0 9.21%, #3484A9 17.3%, #2F6195 25.73%, #2B4486 34.58%, #282E79 44%, #180564 82.26%);
+        background-position: center right ,bottom 21px left 26px,center center, center center;
+
+        box-shadow: 0px 4px 20px 0px rgba(0, 7, 94, 0.10);
+        margin-bottom: 60px;
+    
+    
+        &__name {
+            display: block;
+            width: 341px;
+            margin-right: 79px;
+            margin-bottom: 30px;
+            
+            @include upper-text(22px, #FFF);
+        }
+    
+        &__grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(6, 60px);
+            gap: 20px;
+
+            &-elem {
+                display: flex;
+                align-items: center;
+            }
+            
+    
+        }
+    
+        &__text {
+    
+            &_1 {
+                margin-left: 14px;
+                @include advantages-text(147px);
+                
+            }
+            &_2 {
+                margin-left: 14px;
+                @include advantages-text(176px);
+                
+            }
+            &_3 {
+                margin-left: 14px;
+                @include advantages-text(122px);
+                
+            }
+            &_4 {
+                margin-left: 14px;
+                @include advantages-text(176px);
+                
+            }
+            &_5 {
+                margin-left: 14px;
+                @include advantages-text(148px);
+                
+            }
+            &_6 {
+                margin-left: 14px;
+                @include advantages-text(135px);
+                
+            }
+        }
+    
+    
+    
+        &__frame {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 10px;
+            fill: rgba(52, 110, 164, 0.20);
+            box-shadow: 0px 4px 40px rgba(0, 6, 84, 0.90);
+            border-radius: 50%;
+        }
+    
+    
+    }
+}

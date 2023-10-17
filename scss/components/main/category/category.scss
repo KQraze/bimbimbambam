@@ -16,32 +16,29 @@
 
     &__block {
         overflow: hidden;
-        position: relative;
+        display: flex;
         width: 380px;
         height: 170px;
         flex-shrink: 0;
         border-radius: 10px;
-        background: #FFF;
+        background: url(/images/main/category/ellipse.svg) no-repeat, #FFF;
+        background-position: left center;
         box-shadow: 0px 4px 20px 0px rgba(0, 7, 94, 0.10);
 
-        &-circle {
-            position: absolute;
-            left: 0px;
-            z-index: 0;
+        &-info {
+            display: flex;
+            flex-direction: column;
+            margin-top: 30px;
         }
 
         &-image {
-            position: absolute;
-            left:35px;
-            top: 20px;
-            bottom: 20px;
+            width: 140px;
+            height: 130px;
+            flex-shrink: 0;
+            margin: 20px 20px 0 35px;
         }
 
         &-name {
-            position: absolute;
-            top: 30px;
-            right: 32px;
-            
             display: block;
             width: 153px;
             height: 70px;
@@ -52,17 +49,13 @@
             font-style: normal;
             font-weight: 600;
             line-height: 130%; /* 23.4px */
+
         }
 
         &-catalog {
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            
             display: flex;
             flex-direction: row;
-
-            margin: 0 65px 30px 0;
+            margin-top: 18px;
 
             &-name {
                 @include catalog-text($main-color);

@@ -47,11 +47,11 @@
     text-transform: uppercase;  
 }
 
-@mixin white-btn($padding) {
+@mixin white-btn($padding, $font-size: 15px) {
 
     color: $main-color;
     font-family: Nunito Sans;
-    font-size: 15px;
+    font-size: $font-size;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -79,10 +79,10 @@
 
 }
 
-@mixin catalog-text($color) {
+@mixin catalog-text($color, $font-size: 16px) {
     color: $color;
     font-family: Nunito Sans;
-    font-size: 16px;
+    font-size: $font-size;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -119,10 +119,10 @@
     -webkit-text-fill-color: transparent;
 }
 
-@mixin company-desc {
+@mixin company-desc($font-size: 16px) {
     color: #303239;
     font-family: Nunito Sans;
-    font-size: 16px;
+    font-size: $font-size;
     font-style: normal;
     font-weight: 400;
     line-height: 145%; /* 23.2px */
@@ -156,4 +156,10 @@
     &:hover {
         color: #a1a1a1;
     }
+}
+
+@mixin slider-circle($display){
+    display: $display;
+    align-items: center;
+    gap: 10px;
 }

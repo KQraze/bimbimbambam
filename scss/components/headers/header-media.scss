@@ -2,4 +2,83 @@
     header {
         
     }
+
+    .header2__circle-btn_mobile {
+        display: none;
+    }
+}
+
+@include mobile {
+
+    header {
+            
+        .header1 {
+            display: none;
+        }
+
+        .header2 {
+            width: 100%;
+            height: 56px;
+            line-height: 56px;
+
+            &__name {
+                @include gradient-text(18px);
+                text-transform: uppercase;
+                margin-right: 0px;
+
+            }
+            &__menu {
+                display: none;
+            }
+            &__btn {
+                display: none;
+            }
+            &__circle-btn {
+
+                width: 36px;
+                height: 36px;
+                padding: 9px;
+
+                &-icon {
+                    width: 18px;
+
+                    &_1 {
+                        margin-left: 0px;
+                    }
+                }
+
+                &_1 {
+                    display: none;
+                }
+
+
+                
+            }
+
+            &__circle {
+                position: absolute;
+
+                width: 14px;
+                
+                top: -2px;
+                right: -2px;
+
+                &_num {
+                    position: absolute;
+                    top: 0.5px;
+                    right: 2.5px;
+                    color: #FFF;
+                    font-family: Inter;
+                    font-size: 7px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                }
+            }
+
+            &__circle-btn_mobile {
+                display: inherit;
+            }
+        }
+    }
 }

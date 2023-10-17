@@ -1,68 +1,33 @@
 .advantages {
     overflow: hidden;
     position: relative;
+    display: flex;
+    padding: 50px 0 0 60px;
+    
+
     width: $content-width-desktop;
     height: 374px;
     flex-shrink: 0;
 
     border-radius: 10px;
-    background: radial-gradient(130.91% 98.19% at -8.58% -1.44%, #42E8E0 0%, #40DDDA 1.57%, #3AAEC0 9.21%, #3484A9 17.3%, #2F6195 25.73%, #2B4486 34.58%, #282E79 44%, #180564 82.26%);
-
+    background: url(/images/main/advantages/svg.svg) no-repeat ,url(/images/main/advantages/ellipse.svg) no-repeat , url(/images/main/advantages/grid.svg) no-repeat, radial-gradient(130.91% 98.19% at -8.58% -1.44%, #42E8E0 0%, #40DDDA 1.57%, #3AAEC0 9.21%, #3484A9 17.3%, #2F6195 25.73%, #2B4486 34.58%, #282E79 44%, #180564 82.26%);
+    background-position: 55px 29px, right bottom, center center, center center;
     box-shadow: 0px 4px 20px 0px rgba(0, 7, 94, 0.10);
     margin-bottom: 80px;
 
-    &__under {
-
-        &-viduha {
-            position: absolute;
-            display: flex;
-            width: 318px;
-            height: 330px;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            flex-shrink: 0;
-
-            bottom: 15px;
-            left: 55px;
-        }
-
-        &-grid {
-            position: absolute;
-        }
-
-        &-circle {
-            position: absolute;
-            right: -277px;
-            bottom: -369px;
-            width: 511px;
-            height: 511px;
-            flex-shrink: 0;
-            border-radius: 511px;
-            background: #3BB9C6;
-            filter: blur(94px);
-        }
-
-    }
 
     &__name {
         display: block;
         width: 341px;
-
-        position: absolute;
-
-        top: 50px;
-        left: 60px;
+        margin-right: 79px;
         
         @include upper-text(36px, #FFF);
     }
 
     &__grid {
-        position: absolute;
-        top: 50px;
-        right: 41px;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 114px 114px;
         row-gap: 40px;
         column-gap: 64px;
         

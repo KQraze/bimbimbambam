@@ -1,13 +1,13 @@
 @import "./common";
 @import "./components/headers";
-@import "./components/footer/footer/";
+@import "./components/footer/footer";
 @import "./components/main/banner";
 @import "./components/main/category";
-@import "./components/main/advantages/";
-@import "./components/main/hits/";
-@import "./components/main/company/";
-@import "./components/main/form/";
-@import "./components/main/contacts/";
+@import "./components/main/advantages";
+@import "./components/main/hits";
+@import "./components/main/company";
+@import "./components/main/form";
+@import "./components/main/contacts";
 
 
 // дефолт настройки
@@ -49,6 +49,12 @@ main {
 }
 
 @include desktop {
+    main {
+        
+    }
+}
+
+@include mobile {
     main {
         
     }

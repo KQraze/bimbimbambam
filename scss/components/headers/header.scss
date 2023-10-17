@@ -131,10 +131,13 @@
 
         &__circle-btn {
             position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        &__circle-btn:not(:last-child) {
-            margin-right: 10px;
+        &__circle-btn:not(:first-child) {
+            margin-left: 10px;
         }
 
         &__circle {
