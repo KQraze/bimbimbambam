@@ -2677,6 +2677,7 @@ footer {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin-bottom: 0;
   }
   .app__form {
     display: -webkit-box;
