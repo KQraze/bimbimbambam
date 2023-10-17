@@ -2481,6 +2481,7 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 21px;
 }
 .app__form {
   display: -webkit-box;
@@ -2515,7 +2516,6 @@ footer {
   display: -ms-flexbox;
   display: flex;
   margin-right: 20px;
-  margin-bottom: 21px;
   width: 240px;
   padding: 16px 0 15px 20px;
   -webkit-box-align: center;
