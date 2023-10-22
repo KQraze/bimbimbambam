@@ -1,6 +1,47 @@
 @include desktop() {
     footer {
-        
+
+    }
+
+    .footer-mobile {
+        display: none;
+    }
+
+
+}
+
+@include laptop {
+    footer {
+
+    }
+
+    .footer-mobile {
+        display: none;
+    }
+
+}
+
+@include tablet {
+    footer {
+
+    }
+
+    .footer {
+        &__name {
+            margin-bottom: 20px;
+            flex-direction: row;
+            gap: 10px;
+        }
+
+        &__first-half {
+            margin-right: 4%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas:
+                    "name name"
+                    "shopper catalog";
+        }
+
     }
 
     .footer-mobile {
@@ -51,7 +92,7 @@
     
             &-copy {
                 color: #B8B8B8;
-                font-family: Nunito Sans;
+                font-family: Nunito Sans, sans-serif;
                 font-size: 15px;
                 font-style: normal;
                 font-weight: 400;

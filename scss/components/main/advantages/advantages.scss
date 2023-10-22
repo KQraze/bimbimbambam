@@ -2,11 +2,11 @@
     overflow: hidden;
     position: relative;
     display: flex;
-    padding: 50px 0 0 60px;
+    justify-content: space-between;
+    padding: 50px 0 56px 60px;
     
 
-    width: $content-width-desktop;
-    height: 374px;
+    width: 100%;
     flex-shrink: 0;
 
     border-radius: 10px;
@@ -18,8 +18,8 @@
 
     &__name {
         display: block;
-        width: 341px;
-        margin-right: 79px;
+        width: 147px;
+        
         
         @include upper-text(36px, #FFF);
     }
@@ -30,7 +30,7 @@
         grid-template-rows: 114px 114px;
         row-gap: 40px;
         column-gap: 64px;
-        
+        margin-right: 4%;
 
     }
 

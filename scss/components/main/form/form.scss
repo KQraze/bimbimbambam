@@ -1,13 +1,12 @@
 .app {
     position: relative;
     overflow: hidden;
-    height: 330px;
     flex-shrink: 0;
     border-radius: 10px;
-    box-shadow: 0px 4px 20px 0px rgba(0, 7, 94, 0.10);
+    box-shadow: 0 4px 20px 0 rgba(0, 7, 94, 0.10);
     display: flex;
     flex-direction: column;
-    padding: 50px 0 0 60px;
+    padding: 50px 0 50px 60px;
     background: url(/images/main/form/ellipse.svg) no-repeat, url('/images/main/form/bg\ image.png');
     background-position: bottom left;
     margin-bottom: 80px;
@@ -30,7 +29,7 @@
 
         &-desc {
             color: #FFF;
-            font-family: Nunito Sans;
+            font-family: Nunito Sans, sans-serif;
             font-size: 18px;
             font-style: normal;
             font-weight: 600;
@@ -52,7 +51,7 @@
 
         input {
             color: #F3F3F3;
-            font-family: Nunito Sans;
+            font-family: Nunito Sans, sans-serif;
             font-size: 14px;
             font-style: normal;
             font-weight: 400;
@@ -90,7 +89,7 @@
 
         &-label {
             color: #F3F3F3;
-            font-family: Nunito Sans;
+            font-family: Nunito Sans, sans-serif;
             font-size: 14px;
             font-style: normal;
             font-weight: 400;

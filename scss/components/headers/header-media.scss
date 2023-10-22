@@ -3,20 +3,63 @@
         
     }
 
-    .header2__circle-btn_mobile {
+    .header-bottom__circle-btn_mobile {
         display: none;
     }
 }
+
+@include laptop {
+    header {
+
+    }
+
+    .header-bottom {
+
+        &__btn {
+            display: none;
+        }
+    }
+
+    .header-bottom__circle-btn_mobile {
+        display: none;
+    }
+
+
+}
+
+@include tablet {
+    header {
+
+    }
+
+    .header-bottom {
+
+        &__menu {
+            display: none;
+        }
+
+        &__btn {
+            display: none;
+        }
+    }
+
+    .header-bottom__circle-btn_mobile {
+        display: none;
+    }
+
+
+}
+
 
 @include mobile {
 
     header {
             
-        .header1 {
+        .header-top {
             display: none;
         }
 
-        .header2 {
+        .header-bottom {
             width: 100%;
             height: 56px;
             line-height: 56px;
@@ -24,7 +67,7 @@
             &__name {
                 @include gradient-text(18px);
                 text-transform: uppercase;
-                margin-right: 0px;
+                margin-right: 0;
 
             }
             &__menu {
@@ -43,7 +86,7 @@
                     width: 18px;
 
                     &_1 {
-                        margin-left: 0px;
+                        margin-left: 0;
                     }
                 }
 
@@ -68,7 +111,7 @@
                     top: 0.5px;
                     right: 2.5px;
                     color: #FFF;
-                    font-family: Inter;
+                    font-family: Inter, sans-serif;
                     font-size: 7px;
                     font-style: normal;
                     font-weight: 500;

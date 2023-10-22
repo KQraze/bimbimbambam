@@ -1,3 +1,57 @@
+@include laptop {
+    .advantages {
+        background: url(/images/main/advantages/svg.svg) no-repeat ,url(/images/main/advantages/ellipse.svg) no-repeat , url(/images/main/advantages/vector.svg) repeat, radial-gradient(130.91% 98.19% at -8.58% -1.44%, #42E8E0 0%, #40DDDA 1.57%, #3AAEC0 9.21%, #3484A9 17.3%, #2F6195 25.73%, #2B4486 34.58%, #282E79 44%, #180564 82.26%);
+        background-position: 55px 89px, right bottom, top center, center center;
+
+
+        &__name {
+            @include upper-text(33px, #FFF);
+        }
+
+        &__grid {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 100px 100px;
+            margin-right: 10%;
+        }
+    }
+}
+
+@include tablet {
+    .advantages {
+        padding: 35px 0 56px 60px;
+        flex-direction: column;
+        background: url(/images/main/advantages/svg.svg) no-repeat ,url(/images/main/advantages/ellipse.svg) no-repeat , url(/images/main/advantages/grid.svg) repeat, radial-gradient(130.91% 98.19% at -8.58% -1.44%, #42E8E0 0%, #40DDDA 1.57%, #3AAEC0 9.21%, #3484A9 17.3%, #2F6195 25.73%, #2B4486 34.58%, #282E79 44%, #180564 82.26%);
+        background-position: center bottom 50%, right bottom, top center, center center;
+        &__grid {
+            margin-right: 0;
+            column-gap: 0;
+            grid-template-columns: 1fr 1fr;
+
+            &-elem {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+            }
+        }
+
+        &__name {
+            text-align: center;
+            transform: translate(-5%);
+            margin-bottom: 30px;
+            width: 100%;
+
+        }
+
+    }
+}
+
+
+
+
+
+
+
+
 @include mobile {
     .advantages {
         overflow: hidden;
@@ -5,6 +59,7 @@
         display: flex;
         flex-direction: column;
         padding: 30px 0 0 30px;
+        justify-content: start;
     
         width: $content-width-mobile;
         height: 818px;
@@ -19,10 +74,13 @@
     
     
         &__name {
+            text-align: start;
             display: block;
-            width: 341px;
+            width: 242px;
             margin-right: 79px;
             margin-bottom: 30px;
+            margin-left: 0;
+            transform: translate(0);
             
             @include upper-text(22px, #FFF);
         }
@@ -36,6 +94,7 @@
             &-elem {
                 display: flex;
                 align-items: center;
+                gap: 0;
             }
             
     

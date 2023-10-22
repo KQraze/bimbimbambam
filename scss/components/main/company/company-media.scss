@@ -1,3 +1,43 @@
+@include laptop {
+    .company {
+    }
+}
+
+@include tablet {
+    .company {
+        &__about {
+            flex-direction: column;
+            margin-bottom: 50px;
+            
+            &-desc {
+                margin-bottom: 30px;
+            }
+
+            &-h1 {
+                @include upper-text(32px, $main-color);
+            }
+
+            &-img {
+                width: 80%;
+                height: 300px;
+                
+                object-fit: cover;
+                border-radius: 10px;
+            }
+        }
+
+        &__grid {
+            grid-template-columns: 1fr 1fr 1fr;
+            row-gap: 20px;
+        }
+    }
+}
+
+
+
+
+
+
 @include mobile {
     .company {
         position: relative;
@@ -30,6 +70,7 @@
                 width: 300px;
                 height: 191px;
                 flex-shrink: 0;
+                object-fit: contain;
                 
             }
         }
@@ -47,7 +88,7 @@
             
             &-img {
                 border-radius: 50%;
-                box-shadow: 0px 4px 20px rgba(0, 7, 94, 0.10);
+                box-shadow: 0 4px 20px rgba(0, 7, 94, 0.10);
                 margin-bottom: 30px; 
             }
     

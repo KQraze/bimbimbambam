@@ -1,7 +1,27 @@
  @mixin desktop () {
-    @media (max-width: $breakpoint-desktop) {
+    @media (min-width: $breakpoint-desktop) {
         .container {
             max-width: $content-width-desktop;
+            margin: 0 auto;
+        }
+        @content;
+    }
+ }
+
+ @mixin laptop () {
+    @media (max-width: $breakpoint-laptop) {
+        .container {
+            max-width: $content-width-laptop;
+            margin: 0 auto;
+        }
+        @content;
+    }
+ }
+
+ @mixin tablet () {
+    @media (max-width: $breakpoint-tablet) {
+        .container {
+            max-width: $content-width-tablet;
             margin: 0 auto;
         }
         @content;

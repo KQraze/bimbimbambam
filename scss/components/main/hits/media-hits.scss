@@ -1,3 +1,59 @@
+@include laptop {
+    .hits {
+        &__grid {
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 360px 360px;
+
+        }
+
+        &__name {
+            @include upper-text(35px, $main-color);
+        }
+
+        &__cart {
+            &-mobile {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                border-radius: 10px;
+                background: #FFF;
+                box-shadow: 0 4px 20px 0 rgba(0, 7, 94, 0.10);
+            }
+        }
+        
+        
+    }
+}
+
+@include tablet {
+    .hits {
+        &__grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        &__name {
+            @include upper-text(32px, $main-color);
+        }
+
+        &__cart {
+            &-mobile {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                border-radius: 10px;
+                background: #FFF;
+                box-shadow: 0 4px 20px 0 rgba(0, 7, 94, 0.10);
+            }
+        }
+       
+    }
+}
+
+
+
+
 @include mobile {
     .hits {
         position: relative;
@@ -22,7 +78,7 @@
             flex-direction: column;
             border-radius: 10px;
             background: #FFF;
-            box-shadow: 0px 4px 20px 0px rgba(0, 7, 94, 0.10);
+            box-shadow: 0 4px 20px 0 rgba(0, 7, 94, 0.10);
         }
     
         &__slider {
@@ -48,6 +104,7 @@
     
             &-text {
                 @include gradient-text(10px);
+                
             }
         }
     
@@ -76,7 +133,7 @@
         &__info {
             position: relative;
             display: flex;
-            margin: 0 15px 0px 15px;
+            margin: 0 15px 0 15px;
             flex-direction: column;
     
             &-name {
@@ -97,7 +154,7 @@
                 &-name {
                     margin-left: 8px;
                     color: #9B9B9B;
-                    font-family: Nunito Sans;
+                    font-family: Nunito Sans, sans-serif;
                     font-size: 12px;
                     font-style: normal;
                     font-weight: 600;
@@ -111,6 +168,7 @@
                 flex-direction: row;
                 justify-content: space-between;
                 margin-bottom: 6px;
+                white-space: nowrap;
             }
         }
     
@@ -144,7 +202,7 @@
     
             &-sale {
                 color: #9B9B9B;
-                font-family: Nunito Sans;
+                font-family: Nunito Sans, sans-serif;
                 font-size: 10px;
                 font-style: normal;
                 font-weight: 600;
@@ -162,7 +220,7 @@
             width: 94px;
             display: block;
             color: $main-color;
-            font-family: Nunito Sans;
+            font-family: Nunito Sans, sans-serif;
             font-size: 14px;
             font-style: normal;
             font-weight: 600;

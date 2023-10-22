@@ -54,6 +54,18 @@ main {
     }
 }
 
+@include laptop {
+    main {
+        
+    }
+}
+
+@include tablet {
+    main {
+        
+    }
+}
+
 @include mobile {
     main {
         

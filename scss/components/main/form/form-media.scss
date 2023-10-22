@@ -1,13 +1,48 @@
+@include tablet {
+    .app {
+        padding: 35px 0 35px 35px;
+        background: url(/images/main/form/ellipse.svg) no-repeat, url('/images/main/form/form-fon.jpg') no-repeat;
+        background-position: bottom left, -1800px -400px;
+        &__inputs {
+            flex-wrap: wrap;
+        }
+
+        &__form {
+            &-input {
+
+            }
+
+            &-btn {
+                margin-top: 21px;
+            }
+        }
+
+        &__text {
+            &-1 {
+                @include upper-text(25px, white);
+                width: 75%;     
+            }
+            
+            &-2 {
+                @include upper-text(25px, white);
+            }
+
+
+        }
+    }
+}
+
+
+
 @include mobile {
         .app {
-            display: block;
             overflow: hidden;
             width: 300px;
             height: 468px;
 
             flex-shrink: 0;
             border-radius: 10px;
-            box-shadow: 0px 4px 20px 0px rgba(0, 7, 94, 0.10);
+            box-shadow: 0 4px 20px 0 rgba(0, 7, 94, 0.10);
             display: flex;
             flex-direction: column;
             padding: 30px 0 0 30px;
@@ -36,7 +71,7 @@
         
                 &-desc {
                     color: #FFF;
-                    font-family: Nunito Sans;
+                    font-family: Nunito Sans, sans-serif;
                     font-size: 14px;
                     font-style: normal;
                     font-weight: 400;
@@ -61,7 +96,7 @@
         
                 input {
                     color: #F3F3F3;
-                    font-family: Nunito Sans;
+                    font-family: Nunito Sans, sans-serif;
                     font-size: 14px;
                     font-style: normal;
                     font-weight: 400;
@@ -102,7 +137,7 @@
         
                 &-label {
                     color: #F3F3F3;
-                    font-family: Nunito Sans;
+                    font-family: Nunito Sans, sans-serif;
                     font-size: 12px;
                     font-style: normal;
                     font-weight: 400;
@@ -117,6 +152,7 @@
         
         
                 &-btn {
+                    margin: 0;
                     position: absolute;
                     bottom: -100px;
                     @include white-btn(15px 81px 15px 80px)

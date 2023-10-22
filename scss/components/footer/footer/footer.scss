@@ -1,30 +1,34 @@
 footer {
     width: 100%;
-    height: 336px;
     flex-shrink: 0;
     background: $main-color;
 }
 
 .footer {
     padding-top: 60px;
+    padding-bottom: 60px;
     display: flex;
     justify-content: space-between;
 
 
     &__btn {
         @include white-btn(15px 39px);
+        white-space: nowrap;
     }
 
     &__first-half {
         margin-top: 10px;
+        flex-grow: 1;
         display: flex;
-        justify-content: start;
+        justify-content: space-between;
+        margin-right: 8%;
     }
 
     &__name {
         display: inline-flex;
         flex-direction: column;
-        margin-right: 167px;
+        grid-area: name;
+
 
         &-h1 {
             @include upper-text(22px, #fff);
@@ -33,7 +37,7 @@ footer {
 
         &-copy {
             color: #B8B8B8;
-            font-family: Nunito Sans;
+            font-family: Nunito Sans, sans-serif;
             font-size: 15px;
             font-style: normal;
             font-weight: 400;
@@ -44,7 +48,7 @@ footer {
     &__shopper {
         display: flex;
         flex-direction: column;
-        margin-right: 171px;
+        grid-area: shopper;
 
         &-h1 {
             @include footer-utext;
@@ -61,6 +65,7 @@ footer {
         }
     }
     &__catalog {
+        grid-area: catalog;
         &-h1 {
             @include footer-utext;
             margin-bottom: 20px;

@@ -1,5 +1,4 @@
 .category {
-    height: 449px;
     margin: 0 0 80px 0;
     
     &__h1 {
@@ -17,25 +16,26 @@
     &__block {
         overflow: hidden;
         display: flex;
-        width: 380px;
         height: 170px;
-        flex-shrink: 0;
+        justify-content: space-between;
         border-radius: 10px;
         background: url(/images/main/category/ellipse.svg) no-repeat, #FFF;
         background-position: left center;
-        box-shadow: 0px 4px 20px 0px rgba(0, 7, 94, 0.10);
+        box-shadow: 0 4px 20px 0 rgba(0, 7, 94, 0.10);
 
         &-info {
             display: flex;
             flex-direction: column;
             margin-top: 30px;
+            margin-right: 10%;
         }
 
         &-image {
             width: 140px;
             height: 130px;
             flex-shrink: 0;
-            margin: 20px 20px 0 35px;
+            margin: 20px 0 0 10%;
+            background-size: cover;
         }
 
         &-name {
@@ -44,7 +44,7 @@
             height: 70px;
             
             color:#303239;
-            font-family: Nunito Sans;
+            font-family: Nunito Sans, sans-serif;
             font-size: 18px;
             font-style: normal;
             font-weight: 600;

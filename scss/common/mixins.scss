@@ -1,6 +1,6 @@
 @mixin header1-font($color, $font-weight) {
     color: $color;
-    font-family: Nunito Sans;
+    font-family: Nunito Sans, sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: $font-weight;
@@ -18,7 +18,7 @@
     cursor: pointer;
     
     color: #FFF;
-    font-family: Nunito Sans;
+    font-family: Nunito Sans, sans-serif;
     font-size: $font-size;
     font-style: normal;
     font-weight: 700;
@@ -26,7 +26,7 @@
     transition: all 0.3s ease-in-out;
 
     &:hover {
-        box-shadow: 0px 4px 20px 0px rgba(26, 11, 115, 0.40);
+        box-shadow: 0 4px 20px 0 rgba(26, 11, 115, 0.40);
     }
     &:disabled {
         background: linear-gradient(0deg, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.50) 100%), linear-gradient(74deg, #0D748B -10.13%, #1A0B73 75.49%);
@@ -39,7 +39,7 @@
 
 @mixin upper-text($font-size, $color) {
     color: $color;
-    font-family: Nunito Sans;
+    font-family: Nunito Sans, sans-serif;
     font-size: $font-size;
     font-style: normal;
     font-weight: 800;
@@ -50,7 +50,7 @@
 @mixin white-btn($padding, $font-size: 15px) {
 
     color: $main-color;
-    font-family: Nunito Sans;
+    font-family: Nunito Sans, sans-serif;
     font-size: $font-size;
     font-style: normal;
     font-weight: 700;
@@ -71,7 +71,7 @@
         background: rgba(255, 255, 255, 0.60);
     }
     &:hover {
-        box-shadow: 0px 4px 30px 0px rgba(255, 255, 255, 0.40);
+        box-shadow: 0 4px 30px 0 rgba(255, 255, 255, 0.40);
     }
     &:active {
         background: linear-gradient(0deg, rgba(24, 21, 75, 0.15) 0%, rgba(24, 21, 75, 0.15) 100%), #FFF;
@@ -81,7 +81,7 @@
 
 @mixin catalog-text($color, $font-size: 16px) {
     color: $color;
-    font-family: Nunito Sans;
+    font-family: Nunito Sans, sans-serif;
     font-size: $font-size;
     font-style: normal;
     font-weight: 700;
@@ -99,7 +99,7 @@
 @mixin advantages-text($width) {
     display: block;
     color: #FFF;
-    font-family: Nunito Sans;
+    font-family: Nunito Sans, sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
@@ -109,7 +109,7 @@
 
 @mixin gradient-text($font-size) {
     color: $main-gradient;
-    font-family: Nunito Sans;
+    font-family: Nunito Sans ,sans-serif;
     font-size: $font-size;
     font-style: normal;
     font-weight: 800;
@@ -121,7 +121,7 @@
 
 @mixin company-desc($font-size: 16px) {
     color: #303239;
-    font-family: Nunito Sans;
+    font-family: Nunito Sans, sans-serif;
     font-size: $font-size;
     font-style: normal;
     font-weight: 400;
@@ -130,7 +130,7 @@
 
 @mixin footer-utext {
     color: #B8B8B8;
-    font-family: Nunito Sans;
+    font-family: Nunito Sans, sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
@@ -141,7 +141,7 @@
 
 @mixin footer-text($color) {
     color: $color;
-    font-family: Nunito Sans;
+    font-family: Nunito Sans, sans-serif;
     font-size: 15px;
     font-style: normal;
     font-weight: 400;

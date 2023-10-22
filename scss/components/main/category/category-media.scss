@@ -1,3 +1,69 @@
+@include laptop {
+    .category {
+
+        &__h1 {
+            @include upper-text(35px, $main-color);
+        }
+        &__block {
+
+            &-info {
+                margin-right: 7%;
+            }
+
+            &-image {
+                margin: 20px 0 0 7%;
+                transform: scale(0.9);
+            }
+
+            &-name {
+                font-size: 17px;
+                width: 49%;
+            }
+
+            &-catalog {
+                &-name {
+                    @include catalog-text($main-color, 14.5px);
+                }
+
+                &-arrow {
+                    width: 20px;
+                }
+            }
+        }
+    }
+}
+
+@include tablet {
+    .category {
+        &__h1 {
+            @include upper-text(32px, $main-color);
+        }
+
+        &__grid {
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        &__block {
+
+            &-info {
+                margin-right: 5%;
+            }
+
+            &-image {
+                margin: 20px 0 0 5%;
+                transform: scale(0.9);
+            }
+
+            &-name {
+                font-size: 16.5px;
+                width: 50%;
+            }
+        }
+        
+    }
+}
+
 @include mobile {
     .category {
         height: 950px;
