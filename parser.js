@@ -4,8 +4,9 @@ let data = await response.json();
 
 // Задача переменных
 let label;
-let select;
-let option;
+let checkbox;
+let div;
+let checkdiv;
 
 // Создание формы
 const createForm = (form, data) => {
@@ -21,6 +22,9 @@ const createFormContent = (data) => {
 
         console.log(field.input);
 
+        div = document.createElement('div');
+        div.setAttribute('class', 'form__input');
+
         //  Проверка на label
         (field.label)
             ? label = document.createElement('label')
@@ -29,7 +33,7 @@ const createFormContent = (data) => {
         // Создание label при его наличии
         if (label !== null) {
             label.innerHTML = field.label;
-            formCreate.appendChild(label);
+            div.appendChild(label);
         }
 
         // Создание input поля
@@ -49,6 +53,7 @@ const createFormContent = (data) => {
         // Проверка на mask
         if (field.input.mask) {
             input.setAttribute('mask', field.input.mask);
+            input.setAttribute('placeholder', field.input.mask)
         }
 
         // Проверка на список technology (interview.js)
@@ -56,25 +61,30 @@ const createFormContent = (data) => {
 
             // Убираем поле ввода
             input.setAttribute('hidden', 'true');
-
-            // Создаём выпадающий список
-            select = document.createElement('select');
-
-            // Добавляем атрибуты
-            select.setAttribute('multiple', field.input.multiple);
-
-            // Перебираем массив данных для списка
+            // Перебираем массив данных для списка чекбоксов
             field.input.technologies.map((value) => {
-                    console.log(value);
-                    option = document.createElement('option');
-                    option.innerHTML = value;
 
-                    // Добавляем элемент списка
-                    select.appendChild(option)
+                    checkdiv = document.createElement('div')
+                    checkdiv.setAttribute('class', 'form__checkbox')
+
+                    // Создаем чекбокс
+                    checkbox = document.createElement('input');
+                    // Устанавливаем атрибуты
+                    checkbox.setAttribute('type', 'checkbox');
+                    checkbox.setAttribute('name', value);
+                    checkbox.setAttribute('value', value);
+                    checkbox.setAttribute('id', value);
+                    // Добавляем label to checkbox
+                    label = document.createElement('label');
+                    label.setAttribute('for', value)
+                    label.innerHTML = value;
+                    // помещаем элементы в форму
+                    checkdiv.appendChild(checkbox);
+                    checkdiv.appendChild(label);
+
+                    div.appendChild(checkdiv);
+
                 })
-
-            // Добавляем выпадающий список в форму
-            formCreate.appendChild(select);
         }
 
         // Проверка на multiple
@@ -83,11 +93,12 @@ const createFormContent = (data) => {
         }
 
         if (field.input.filetype) {
-            input.setAttribute('filetype', field.input.multiple);
+            input.setAttribute('accept', "." + field.input.filetype.join(",."));
         }
 
-        // Добавляем input в форму
-        formCreate.appendChild(input);
+        // Добавляем input в блок
+        div.appendChild(input);
+        formCreate.appendChild(div)
     });
     return formCreate;
 }
