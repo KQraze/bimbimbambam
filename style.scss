@@ -3,28 +3,58 @@
   padding: 0;
 }
 
+body {
+  background: #00148c;
+}
+
+.btn-primary {
+  margin-top: 6px;
+}
+
+.container {
+  width: 50%;
+}
 .main {
+
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 #formCreate {
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
 
 .form {
   margin-top: 40px;
-  background: #ffc7c7;
+  background: #cdd5ff;
   border-radius: 10px;
 
-  padding: 10px;
+  padding: 10px 20px 10px 20px;
   display: flex;
   box-shadow: 0 4px 20px 0 rgba(0, 7, 94, 0.10);
   flex-direction: column;
   align-items: center;
   font-family: Calibri, sans-serif;
+
+  &__ref {
+    display: flex;
+    gap: 5px;
+  }
+
+  &__btns {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+  }
+
+  &__color {
+    width: 40px;
+    height: 20px;
+    border-radius: 5px;
+  }
 
   label {
     font-size: 18px;
@@ -33,8 +63,8 @@
   input {
 
     border-radius: 5px;
-    font-size: 14px;
-    padding: 8px 16px;
+    font-size: 18px;
+    padding: 6px 8px;
     border: none;
     transition: all 0.3s ease-in-out;
     color: #505050;
@@ -42,17 +72,38 @@
 
     &:focus {
       outline: none;
-      background: #fff3f3;
+      background: #f3f3ff;
     }
 
     &:active {
       outline: none;
+    }
+
+    &[type="text"] {
+      width: 100%;
+    }
+
+    &[type="password"] {
+      width: 100%;
+    }
+
+    &[type="number"] {
+      width: 100%;
+    }
+
+    &[type="email"] {
+      width: 100%;
+    }
+    &[type="textarea"] {
+      width: 100%;
     }
   }
 
   &__name {
     color: #000000;
     text-transform: uppercase;
+    font-weight: 600;
+    font-family: Calibri, sans-serif;
 
   }
 
@@ -67,5 +118,8 @@
   &__checkbox {
     display: flex;
     gap: 5px;
+    margin-bottom: 10px;
   }
+
+
 }

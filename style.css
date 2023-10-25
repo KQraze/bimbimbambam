@@ -3,6 +3,18 @@
   padding: 0;
 }
 
+body {
+  background: #00148c;
+}
+
+.btn-primary {
+  margin-top: 6px;
+}
+
+.container {
+  width: 50%;
+}
+
 .main {
   display: flex;
   flex-direction: column;
@@ -10,42 +22,74 @@
 }
 
 #formCreate {
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
 
 .form {
   margin-top: 40px;
-  background: #ffc7c7;
+  background: #cdd5ff;
   border-radius: 10px;
-  padding: 10px;
+  padding: 10px 20px 10px 20px;
   display: flex;
   box-shadow: 0 4px 20px 0 rgba(0, 7, 94, 0.1);
   flex-direction: column;
   align-items: center;
   font-family: Calibri, sans-serif;
 }
+.form__ref {
+  display: flex;
+  gap: 5px;
+}
+.form__btns {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+.form__color {
+  width: 40px;
+  height: 20px;
+  border-radius: 5px;
+}
 .form label {
   font-size: 18px;
 }
 .form input {
   border-radius: 5px;
-  font-size: 14px;
-  padding: 8px 16px;
+  font-size: 18px;
+  padding: 6px 8px;
   border: none;
   transition: all 0.3s ease-in-out;
   color: #505050;
 }
 .form input:focus {
   outline: none;
-  background: #fff3f3;
+  background: #f3f3ff;
 }
 .form input:active {
   outline: none;
 }
+.form input[type=text] {
+  width: 100%;
+}
+.form input[type=password] {
+  width: 100%;
+}
+.form input[type=number] {
+  width: 100%;
+}
+.form input[type=email] {
+  width: 100%;
+}
+.form input[type=textarea] {
+  width: 100%;
+}
 .form__name {
   color: #000000;
   text-transform: uppercase;
+  font-weight: 600;
+  font-family: Calibri, sans-serif;
 }
 .form__input {
   display: flex;
@@ -56,6 +100,7 @@
 .form__checkbox {
   display: flex;
   gap: 5px;
+  margin-bottom: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

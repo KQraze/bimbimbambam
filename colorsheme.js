@@ -1,5 +1,5 @@
 {
-    "name":"website_color_scheme",
+    "name":"website color scheme",
     "fields":[
         {
             "label":"Choose color scheme",
