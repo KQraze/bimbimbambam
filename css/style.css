@@ -874,7 +874,7 @@ footer {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
 }
-.banner__block1 {
+.banner__block-first {
   position: relative;
   height: 440px;
   border-radius: 10px;
@@ -890,10 +890,10 @@ footer {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.banner__block1_info {
+.banner__block-first_info {
   margin: 80px 0 0 57px;
 }
-.banner__block1_name {
+.banner__block-first_name {
   display: block;
   color: #FFF;
   font-family: Nunito Sans, sans-serif;
@@ -904,7 +904,7 @@ footer {
   text-transform: uppercase;
   margin-bottom: 20px;
 }
-.banner__block1_desc {
+.banner__block-first_desc {
   color: #FFF;
   font-family: Nunito Sans, sans-serif;
   font-size: 18px;
@@ -913,7 +913,7 @@ footer {
   line-height: normal;
   margin-bottom: 30px;
 }
-.banner__block1_btn {
+.banner__block-first_btn {
   color: #18154B;
   font-family: Nunito Sans, sans-serif;
   font-size: 15px;
@@ -937,25 +937,25 @@ footer {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-.banner__block1_btn:disabled {
+.banner__block-first_btn:disabled {
   background: rgba(255, 255, 255, 0.6);
 }
-.banner__block1_btn:hover {
+.banner__block-first_btn:hover {
   -webkit-box-shadow: 0 4px 30px 0 rgba(255, 255, 255, 0.4);
           box-shadow: 0 4px 30px 0 rgba(255, 255, 255, 0.4);
 }
-.banner__block1_btn:active {
+.banner__block-first_btn:active {
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(24, 21, 75, 0.15)), to(rgba(24, 21, 75, 0.15))), #FFF;
   background: linear-gradient(0deg, rgba(24, 21, 75, 0.15) 0%, rgba(24, 21, 75, 0.15) 100%), #FFF;
 }
-.banner__block1_img {
+.banner__block-first_img {
   margin: 95px 7% 0 0;
   width: 263px;
   height: 250px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
-.banner__block1_slider {
+.banner__block-first_slider {
   position: absolute;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -967,7 +967,7 @@ footer {
   bottom: 30px;
   right: 30px;
 }
-.banner__block2 {
+.banner__block-second {
   overflow: hidden;
   position: relative;
   border-radius: 10px;
@@ -977,10 +977,10 @@ footer {
   background: url("/images/main/banner/banner2.svg") no-repeat, url(/images/main/banner/blur-1.svg) no-repeat, url(/images/main/banner/blur-2.svg) no-repeat, linear-gradient(0deg, #1A0B73 0%, #1A0B73 100%), radial-gradient(171.82% 119.39% at -6.32% -2.5%, #42E8E0 0%, #40DDDA 0%, #3AAEC0 9.21%, #3484A9 17.3%, #2F6195 25.73%, #2B4486 34.58%, #282E79 44%, #261E71 54.25%, #24156C 65.94%, #24126A 82.26%);
   background-position: bottom 23px left 8px, left top, right bottom;
 }
-.banner__block2_info {
+.banner__block-second_info {
   margin: 40px 0 0 40px;
 }
-.banner__block2_name {
+.banner__block-second_name {
   color: #fff;
   font-family: Nunito Sans, sans-serif;
   font-size: 28px;
@@ -990,7 +990,7 @@ footer {
   text-transform: uppercase;
   margin-bottom: 10px;
 }
-.banner__block2_desc {
+.banner__block-second_desc {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -999,7 +999,7 @@ footer {
           align-items: center;
   margin: 0;
 }
-.banner__block2_desc-perc {
+.banner__block-second_desc-perc {
   color: #FFF;
   font-family: Nunito Sans, sans-serif;
   font-size: 56px;
@@ -1009,7 +1009,7 @@ footer {
   text-transform: uppercase;
   margin-right: 20px;
 }
-.banner__block2_desc-text {
+.banner__block-second_desc-text {
   color: #FFF;
   font-family: Nunito Sans, sans-serif;
   font-size: 18px;
@@ -1017,7 +1017,7 @@ footer {
   font-weight: 600;
   line-height: 125%;
 }
-.banner__block2_catalog {
+.banner__block-second_catalog {
   position: absolute;
   bottom: 30px;
   right: 30px;
@@ -1030,7 +1030,7 @@ footer {
           flex-direction: row;
   stroke-width: 1.5px;
 }
-.banner__block2_text {
+.banner__block-second_text {
   color: white;
   font-family: Nunito Sans, sans-serif;
   font-size: 16px;
@@ -1048,7 +1048,7 @@ footer {
   .banner {
     gap: 15px;
   }
-  .banner__block2_info {
+  .banner__block-second_info {
     margin: 30px 0 0 8%;
   }
 }
@@ -1068,15 +1068,15 @@ footer {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
   }
-  .banner__block1_info {
+  .banner__block-first_info {
     margin: 50px 0 0 6%;
   }
-  .banner__block1_img {
+  .banner__block-first_img {
     width: 250px;
     height: 237px;
     margin-top: 140px;
   }
-  .banner__block2 {
+  .banner__block-second {
     overflow: hidden;
     position: relative;
     height: 330px;
@@ -1087,7 +1087,7 @@ footer {
     background: url("/images/main/banner/banner2.svg") no-repeat, url(/images/main/banner/blur-1.svg) no-repeat, url(/images/main/banner/blur-2.svg) no-repeat, linear-gradient(0deg, #1A0B73 0%, #1A0B73 100%), radial-gradient(171.82% 119.39% at -6.32% -2.5%, #42E8E0 0%, #40DDDA 0%, #3AAEC0 9.21%, #3484A9 17.3%, #2F6195 25.73%, #2B4486 34.58%, #282E79 44%, #261E71 54.25%, #24156C 65.94%, #24126A 82.26%);
     background-position: bottom 40px right 150px, left top, right bottom;
   }
-  .banner__block2_name {
+  .banner__block-second_name {
     color: #fff;
     font-family: Nunito Sans, sans-serif;
     font-size: 36px;
@@ -1097,7 +1097,7 @@ footer {
     text-transform: uppercase;
     margin-bottom: 20px;
   }
-  .banner__block2_desc {
+  .banner__block-second_desc {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1106,10 +1106,10 @@ footer {
         -ms-flex-align: start;
             align-items: flex-start;
   }
-  .banner__block2_desc-perc {
+  .banner__block-second_desc-perc {
     font-size: 72px;
   }
-  .banner__block2_desc-text {
+  .banner__block-second_desc-text {
     font-size: 20px;
   }
 }
@@ -1137,7 +1137,7 @@ footer {
     -ms-grid-row: 3;
     -ms-grid-column: 1;
   }
-  .banner__block1 {
+  .banner__block-first {
     position: relative;
     height: 400px;
     -ms-flex-negative: 0;
@@ -1156,10 +1156,10 @@ footer {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .banner__block1_info {
+  .banner__block-first_info {
     margin: 30px 71px 0 30px;
   }
-  .banner__block1_name {
+  .banner__block-first_name {
     display: block;
     width: 199px;
     color: #FFF;
@@ -1171,7 +1171,7 @@ footer {
     text-transform: uppercase;
     margin-bottom: 10px;
   }
-  .banner__block1_desc {
+  .banner__block-first_desc {
     color: #FFF;
     font-family: Nunito Sans, sans-serif;
     font-size: 16px;
@@ -1180,7 +1180,7 @@ footer {
     line-height: normal;
     margin-bottom: 18px;
   }
-  .banner__block1_btn {
+  .banner__block-first_btn {
     color: #18154B;
     font-family: Nunito Sans, sans-serif;
     font-size: 14px;
@@ -1204,25 +1204,25 @@ footer {
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
   }
-  .banner__block1_btn:disabled {
+  .banner__block-first_btn:disabled {
     background: rgba(255, 255, 255, 0.6);
   }
-  .banner__block1_btn:hover {
+  .banner__block-first_btn:hover {
     -webkit-box-shadow: 0 4px 30px 0 rgba(255, 255, 255, 0.4);
             box-shadow: 0 4px 30px 0 rgba(255, 255, 255, 0.4);
   }
-  .banner__block1_btn:active {
+  .banner__block-first_btn:active {
     background: -webkit-gradient(linear, left bottom, left top, from(rgba(24, 21, 75, 0.15)), to(rgba(24, 21, 75, 0.15))), #FFF;
     background: linear-gradient(0deg, rgba(24, 21, 75, 0.15) 0%, rgba(24, 21, 75, 0.15) 100%), #FFF;
   }
-  .banner__block1_img {
+  .banner__block-first_img {
     width: 146px;
     height: 141px;
     -ms-flex-negative: 0;
         flex-shrink: 0;
     margin: 7px 16px 36px 138px;
   }
-  .banner__block1_slider {
+  .banner__block-first_slider {
     position: absolute;
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
@@ -1234,7 +1234,7 @@ footer {
     bottom: 20px;
     left: 118px;
   }
-  .banner__block2 {
+  .banner__block-second {
     overflow: hidden;
     position: relative;
     height: 246px;
@@ -1245,10 +1245,10 @@ footer {
     background: url("/images/main/banner/mobile/svg.svg") no-repeat, url(/images/main/banner/blur-1.svg) no-repeat, url(/images/main/banner/blur-2.svg) no-repeat, linear-gradient(0deg, #1A0B73 0%, #1A0B73 100%), radial-gradient(171.82% 119.39% at -6.32% -2.5%, #42E8E0 0%, #40DDDA 0%, #3AAEC0 9.21%, #3484A9 17.3%, #2F6195 25.73%, #2B4486 34.58%, #282E79 44%, #261E71 54.25%, #24156C 65.94%, #24126A 82.26%);
     background-position: bottom 80px right 3px, left top, right bottom;
   }
-  .banner__block2_info {
+  .banner__block-second_info {
     margin: 30px 0 0 30px;
   }
-  .banner__block2_name {
+  .banner__block-second_name {
     color: #fff;
     font-family: Nunito Sans, sans-serif;
     font-size: 20px;
@@ -1258,7 +1258,7 @@ footer {
     text-transform: uppercase;
     margin-bottom: 10px;
   }
-  .banner__block2_desc {
+  .banner__block-second_desc {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1271,7 +1271,7 @@ footer {
             align-items: flex-start;
     margin: 0;
   }
-  .banner__block2_desc-perc {
+  .banner__block-second_desc-perc {
     color: #FFF;
     font-family: Nunito Sans, sans-serif;
     font-size: 38px;
@@ -1281,7 +1281,7 @@ footer {
     text-transform: uppercase;
     margin-bottom: 10px;
   }
-  .banner__block2_desc-text {
+  .banner__block-second_desc-text {
     color: #FFF;
     font-family: Nunito Sans, sans-serif;
     font-size: 14px;
@@ -1289,7 +1289,7 @@ footer {
     font-weight: 600;
     line-height: 125%;
   }
-  .banner__block2_catalog {
+  .banner__block-second_catalog {
     position: absolute;
     bottom: 30px;
     right: 30px;
@@ -1302,7 +1302,7 @@ footer {
             flex-direction: row;
     stroke-width: 1px;
   }
-  .banner__block2_text {
+  .banner__block-second_text {
     color: white;
     font-family: Nunito Sans, sans-serif;
     font-size: 14px;
@@ -1311,14 +1311,14 @@ footer {
     line-height: normal;
     margin-right: 8px;
   }
-  .banner__block2-arrow {
+  .banner__block-second-arrow {
     width: 20px;
   }
 }
 .category {
   margin: 0 0 80px 0;
 }
-.category__h1 {
+.category__name {
   color: #18154B;
   font-family: Nunito Sans, sans-serif;
   font-size: 36px;
@@ -1439,7 +1439,7 @@ footer {
     max-width: 1000px;
     margin: 0 auto;
   }
-  .category__h1 {
+  .category__name {
     color: #18154B;
     font-family: Nunito Sans, sans-serif;
     font-size: 35px;
