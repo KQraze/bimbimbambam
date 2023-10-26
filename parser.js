@@ -49,7 +49,6 @@ clearForm.addEventListener("click", (e) => {
     divForm.setAttribute("style", 'display: none');
     // Очищаем её
     setTimeout(createForm, 1, formCreate, empty);
-    formCreate.innerHTML = "";
     // Возвращаем input file
     inputFile.setAttribute("style", 'display: inherit');
     // Убираем кнопку очистки формы
