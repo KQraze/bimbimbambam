@@ -5,22 +5,13 @@ const clearForm = document.getElementById('clear-form')
 const divForm = document.getElementById('form')
 
 // Задача переменных
-let empty;
-let label;
-let checkbox;
-let div;
-let checkdiv;
-let file;
-let refer;
-
-// Принимаем файл из input[type="file"]
-inputFile.addEventListener("change", async (e) => {
+let empty, label, checkbox, div, checkdiv, file, refer;
+const inputSelector = async (e) => {
     e.preventDefault();
     // Получаем file из инпута
     file = inputFile.files[0]
     // Получаем полный путь до файла
     let nameUrl = file.name;
-
     // Принимаем его и преобразуем в json формат
     let response = fetch(nameUrl)
         .then((response) => {
@@ -28,22 +19,19 @@ inputFile.addEventListener("change", async (e) => {
                 return response.json();
             })
         })
-
     // Принимаем данные из JSON
     let data = await response;
 
     // При выборе файла в инпут показываем форму
     divForm.setAttribute("style", 'display: block')
     // Создаем её
-    setTimeout(createForm, 1, formCreate, data);
+    createForm(formCreate, data);
     // Скрываем input file
     inputFile.setAttribute("style", 'display: none')
     // Добавляем кнопку очистки формы
     clearForm.setAttribute("style", 'display: inherit')
-})
-
-// Действия при нажатии кнопки "Очистить форму"
-clearForm.addEventListener("click", (e) => {
+}
+const formClear = (e) => {
     e.preventDefault();
     // Скрываем форму
     divForm.setAttribute("style", 'display: none');
@@ -54,7 +42,11 @@ clearForm.addEventListener("click", (e) => {
     inputFile.setAttribute("style", 'display: inherit');
     // Убираем кнопку очистки формы
     clearForm.setAttribute("style", 'display: none');
-})
+}
+// Принимаем файл из input[type="file"]
+inputFile.addEventListener("change", inputSelector)
+// Действия при нажатии кнопки "Очистить форму"
+clearForm.addEventListener("click", formClear)
 
 // Создание формы
 const createForm = (form, data) => {
@@ -64,7 +56,6 @@ const createForm = (form, data) => {
 }
 // Создание контента формы
 const createFormContent = (data) => {
-
     // Перебор массива "fields"
     data.fields.map((field) => {
         // Создаём блок для инпута
@@ -81,118 +72,40 @@ const createFormContent = (data) => {
             label.innerHTML = field.label;
             div.appendChild(label);
         }
-
         // Создание input поля
         let input = document.createElement('input');
 
         // Тип поля
         input.setAttribute('type', field.input.type);
 
-        // Если это input file добавим стилей
-        if (field.input.type === 'file') {
-            input.setAttribute('class', "form-control")
+        for (let attr in field.input) {
+            switch (attr) {
+                case 'required': input.setAttribute('required', field.input.required); break;
+                case 'placeholder': input.setAttribute('placeholder', field.input.placeholder); break;
+                case 'mask':
+                    input.setAttribute('mask', field.input.mask);
+                    input.setAttribute('placeholder', field.input.mask);
+                    break;
+                case 'multiple': input.setAttribute('multiple', field.input.multiple); break;
+                case 'filetype': input.setAttribute('accept', "." + field.input.filetype.join(",.")); break;
+
+            }
         }
 
-        // Проверка на checked
-        if (field.input.type === 'checkbox' && field.input.checked === "true") {
-            input.setAttribute('checked', '');
+        switch (field.input.type) {
+            case 'color':
+                input.setAttribute('hidden', 'true');
+                checkArr(field.input.colors, div, checkdiv, checkbox, label, field.input.type); break;
+            case 'technology':
+                input.setAttribute('hidden', 'true');
+                checkArr(field.input.technologies, div, checkdiv, checkbox, label, field.input.type); break;
+            case 'file':
+                input.setAttribute('class', "form-control"); break;
         }
-
-        // Проверка на required
-        if (field.input.required) {
-            input.setAttribute('required', field.input.required);
-        }
-        // Проверка на placeholder
-        if (field.input.placeholder) {
-            input.setAttribute('placeholder', field.input.placeholder);
-        }
-        // Проверка на mask
-        if (field.input.mask) {
-            input.setAttribute('mask', field.input.mask);
-            input.setAttribute('placeholder', field.input.mask)
-        }
-
-        // Если тип инпута color, то преобразуем его в список чекбоксов
-        // и показываем цвета из массива colors
-        if (field.input.type === 'color') {
-            input.setAttribute('hidden', 'true');
-
-            // Перебираем массив colors
-            field.input.colors.map((value) => {
-
-                // Создаём блок для чекбокса
-                checkdiv = document.createElement('div')
-                checkdiv.setAttribute('class', 'form__checkbox')
-
-                // Создаём чекбокс
-                checkbox = document.createElement('input');
-
-                // Задаём ему атрибуты
-                checkbox.setAttribute('type', 'checkbox');
-                checkbox.setAttribute('name', value);
-                checkbox.setAttribute('value', value);
-                checkbox.setAttribute('id', value);
-
-                // Создаём label
-                label = document.createElement('label');
-                label.setAttribute('for', value)
-                label.innerHTML = `<div style="background: ${value}" class="form__color">⠀</div>`;
-
-                // Добавляем всё в блок
-                checkdiv.appendChild(checkbox);
-                checkdiv.appendChild(label);
-
-                div.appendChild(checkdiv);
-
-            })
-        }
-
-        // Проверка на список technology (interview.js)
-        if (field.input.type === 'technology') {
-
-            // Убираем поле ввода
-            input.setAttribute('hidden', 'true');
-            // Перебираем массив данных для списка чекбоксов
-            field.input.technologies.map((value) => {
-
-                checkdiv = document.createElement('div')
-                checkdiv.setAttribute('class', 'form__checkbox')
-
-                // Создаем чекбокс
-                checkbox = document.createElement('input');
-                // Устанавливаем атрибуты
-                checkbox.setAttribute('type', 'checkbox');
-                checkbox.setAttribute('name', value);
-                checkbox.setAttribute('value', value);
-                checkbox.setAttribute('id', value);
-                // Добавляем label to checkbox
-                label = document.createElement('label');
-                label.setAttribute('for', value)
-                label.innerHTML = value;
-                // помещаем элементы в форму
-                checkdiv.appendChild(checkbox);
-                checkdiv.appendChild(label);
-
-                div.appendChild(checkdiv);
-
-            })
-        }
-
-        // Проверка на multiple
-        if (field.input.multiple) {
-            input.setAttribute('multiple', field.input.multiple);
-        }
-
-        // Проверка на filetype
-        if (field.input.filetype) {
-            input.setAttribute('accept', "." + field.input.filetype.join(",."));
-        }
-
         // Добавляем input в блок
         div.appendChild(input);
         formCreate.appendChild(div)
     });
-
     // Создаём references
     let input;
     if (data.references) {
@@ -260,8 +173,6 @@ const createFormContent = (data) => {
             // Создаём этот блок в форме
             formCreate.appendChild(div);
         }
-
-
     }
 
     // Возвращаем созданную форму
