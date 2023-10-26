@@ -35,7 +35,7 @@ inputFile.addEventListener("change", async (e) => {
     // При выборе файла в инпут показываем форму
     divForm.setAttribute("style", 'display: block')
     // Создаем её
-    createForm(formCreate, data);
+    setTimeout(createForm, 1, formCreate, data);
     // Скрываем input file
     inputFile.setAttribute("style", 'display: none')
     // Добавляем кнопку очистки формы
@@ -49,6 +49,7 @@ clearForm.addEventListener("click", (e) => {
     divForm.setAttribute("style", 'display: none');
     // Очищаем её
     setTimeout(createForm, 1, formCreate, empty);
+    formCreate.innerHTML = "";
     // Возвращаем input file
     inputFile.setAttribute("style", 'display: inherit');
     // Убираем кнопку очистки формы
@@ -154,27 +155,27 @@ const createFormContent = (data) => {
             // Перебираем массив данных для списка чекбоксов
             field.input.technologies.map((value) => {
 
-                    checkdiv = document.createElement('div')
-                    checkdiv.setAttribute('class', 'form__checkbox')
+                checkdiv = document.createElement('div')
+                checkdiv.setAttribute('class', 'form__checkbox')
 
-                    // Создаем чекбокс
-                    checkbox = document.createElement('input');
-                    // Устанавливаем атрибуты
-                    checkbox.setAttribute('type', 'checkbox');
-                    checkbox.setAttribute('name', value);
-                    checkbox.setAttribute('value', value);
-                    checkbox.setAttribute('id', value);
-                    // Добавляем label to checkbox
-                    label = document.createElement('label');
-                    label.setAttribute('for', value)
-                    label.innerHTML = value;
-                    // помещаем элементы в форму
-                    checkdiv.appendChild(checkbox);
-                    checkdiv.appendChild(label);
+                // Создаем чекбокс
+                checkbox = document.createElement('input');
+                // Устанавливаем атрибуты
+                checkbox.setAttribute('type', 'checkbox');
+                checkbox.setAttribute('name', value);
+                checkbox.setAttribute('value', value);
+                checkbox.setAttribute('id', value);
+                // Добавляем label to checkbox
+                label = document.createElement('label');
+                label.setAttribute('for', value)
+                label.innerHTML = value;
+                // помещаем элементы в форму
+                checkdiv.appendChild(checkbox);
+                checkdiv.appendChild(label);
 
-                    div.appendChild(checkdiv);
+                div.appendChild(checkdiv);
 
-                })
+            })
         }
 
         // Проверка на multiple
@@ -266,4 +267,3 @@ const createFormContent = (data) => {
     // Возвращаем созданную форму
     return formCreate;
 }
-
