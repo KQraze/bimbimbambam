@@ -1,0 +1,122 @@
+// Баннеры
+.banner {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    grid-template-rows: 440px;
+    margin: 40px 0 80px 0;
+// Баннер 1
+
+    &__block-first {
+        position: relative;
+        height: 440px;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px 0 rgba(0, 7, 94, 0.10);
+        background: url(/images/main/banner/img.png) no-repeat ,url('/images/main/banner/circle-ban.svg') no-repeat, linear-gradient(74deg, #0D748B -10.13%, #1A0B73 75.49%), #FFF;;
+        background-position: left center, right center;
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+        
+
+        &_info {
+            margin: 80px 0 0 57px;
+
+        }
+
+        &_name {
+            display: block;
+            @include upper-text(38px, #FFF);
+            margin-bottom: 20px;
+        }
+
+        &_desc {
+            color: #FFF;
+            font-family: Nunito Sans, sans-serif;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            margin-bottom: 30px;
+        }
+
+        &_btn {
+            @include white-btn(15px 31px 15px 32px);
+        }
+
+        &_img {
+            margin: 95px 7% 0 0;
+            width: 263px;
+            height: 250px;
+            flex-shrink: 0;
+        }
+
+        &_slider {
+            position: absolute;
+            @include slider-circle(inline-flex);
+            bottom: 30px;
+            right: 30px;
+        }
+    }
+// Баннер 2
+    &__block-second {
+        overflow: hidden;
+        position: relative;
+
+        border-radius: 10px;
+        box-shadow: 0 4px 20px 0 rgba(0, 7, 94, 0.10);
+        background: url("/images/main/banner/banner2.svg") no-repeat,url(/images/main/banner/blur-1.svg) no-repeat, url(/images/main/banner/blur-2.svg) no-repeat,linear-gradient(0deg, #1A0B73 0%, #1A0B73 100%), radial-gradient(171.82% 119.39% at -6.32% -2.5%, #42E8E0 0%, #40DDDA 0%, #3AAEC0 9.21%, #3484A9 17.3%, #2F6195 25.73%, #2B4486 34.58%, #282E79 44%, #261E71 54.25%, #24156C 65.94%, #24126A 82.26%);
+        background-position: bottom 23px left 8px,left top, right bottom;
+
+        &_info {
+            margin: 40px 0 0 40px;
+        }
+
+        &_name {
+            @include upper-text(28px, #fff);
+            margin-bottom: 10px;
+        }
+
+        &_desc {
+            display: flex;
+            align-items: center;
+            margin: 0;
+        }
+
+        &_desc-perc {
+            color: #FFF;
+            font-family: Nunito Sans, sans-serif;
+            font-size: 56px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            text-transform: uppercase;
+
+            margin-right: 20px;
+        }
+
+        &_desc-text {
+            color: #FFF;
+            font-family: Nunito Sans, sans-serif;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 125%;
+        }
+
+        &_catalog {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            flex-direction: row;
+            stroke-width: 1.5px;
+        }
+
+        &_text {
+            @include catalog-text(white);
+            margin-right: 10px;
+        }
+
+    }
+}

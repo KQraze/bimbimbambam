@@ -1,0 +1,193 @@
+@include tablet {
+    .app {
+        padding: 35px 0 35px 35px;
+        background: url(/images/main/form/ellipse.svg) no-repeat, url('/images/main/form/form-fon.jpg') no-repeat;
+        background-position: bottom left, -1800px -400px;
+        &__inputs {
+            flex-wrap: wrap;
+        }
+
+        &__form {
+            &-input {
+
+            }
+
+            &-btn {
+                margin-top: 21px;
+            }
+        }
+
+        &__text {
+            &-1 {
+                @include upper-text(25px, white);
+                width: 75%;     
+            }
+            
+            &-2 {
+                @include upper-text(25px, white);
+            }
+
+
+        }
+    }
+}
+
+
+
+@include mobile {
+        .app {
+            overflow: hidden;
+            width: 300px;
+            height: 468px;
+
+            flex-shrink: 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px 0 rgba(0, 7, 94, 0.10);
+            display: flex;
+            flex-direction: column;
+            padding: 30px 0 0 30px;
+
+            background: url(/images/main/form/mobile/ellipse.svg) no-repeat, url('/images/main/form/mobile/bg-image.svg') no-repeat;
+            background-position: bottom left;
+            margin-bottom: 60px;
+        
+            // &__all {}   
+        
+            &__text {
+                display: flex;
+                flex-direction: column;
+        
+                &-1 {
+                    @include upper-text(20px, white);
+                    margin-bottom: 10px;
+                    width: 159px;
+                }
+        
+                &-2 {
+                    @include upper-text(20px, white);
+                    margin-bottom: 10px;
+                    width: 224px;
+                }
+        
+                &-desc {
+                    color: #FFF;
+                    font-family: Nunito Sans, sans-serif;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    width: 224px;
+                    line-height: normal;
+                    margin-bottom: 15px;
+                }
+            }
+        
+            &__inputs {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 0;
+        
+            }
+        
+            &__form {
+        
+                display: flex;
+                flex-direction: column;
+        
+                input {
+                    color: #F3F3F3;
+                    font-family: Nunito Sans, sans-serif;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 135%; /* 18.9px */
+                }
+        
+                input::-moz-placeholder { color: #F3F3F3; }
+                input::-webkit-input-placeholder { color: #F3F3F3; }
+        
+                &-input {
+                    display: flex;
+                    width: 240px;
+                    padding: 16px 0 15px 20px;
+                    align-items: center;
+                    border-radius: 50px;
+                    border: 1px solid rgba(243, 243, 243, 0.70);
+                    outline: none;
+                    caret-color: white;
+        
+                    background: rgba(255, 255, 255, 0.30);
+
+                    &:not(:last-child) {
+                        margin-bottom: 15px;
+                    }
+        
+                    &:active {
+                        background: rgba(255, 255, 255, 0.50);
+                        border: 1px solid #F3F3F3;
+                        
+                    }
+        
+                    &:focus {
+                        background: rgba(255, 255, 255, 0.50);
+                    }
+        
+                    
+                }
+        
+                &-label {
+                    color: #F3F3F3;
+                    font-family: Nunito Sans, sans-serif;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    width: 250px;
+                    height: 32px;
+        
+                    &_u {
+                        text-decoration-line: underline;
+                    }
+                }
+        
+        
+                &-btn {
+                    margin: 0;
+                    position: absolute;
+                    bottom: -100px;
+                    @include white-btn(15px 81px 15px 80px)
+                    
+                }
+        
+                input[type="checkbox"] {
+                    display: none;
+                  }
+                  
+                  /* стили для метки */
+                  label {
+                      cursor: pointer;
+                  }
+                  
+                  /* формируем внешний вид чекбокса в псевдоэлементе before */
+                  label:before {
+                    color: #000;
+                    margin-right: 10px;
+                    
+                    border-image: initial;
+                    content: url('/images/main/form/checkboxd.svg');
+                  }
+                  
+                  /* вариации внешнего вида в зав-ти от статуса checkbox */
+                  /* checked */
+                  input:checked + label:before {
+                    content: url('/images/main/form/checkbox.svg');
+                  }
+                  /* disabled */
+                  input:disabled + label:before {
+                    content: url('/images/main/form/checkboxd.svg');
+                  }
+        
+        
+            }
+        }
+}

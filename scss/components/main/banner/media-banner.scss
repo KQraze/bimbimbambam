@@ -1,0 +1,195 @@
+@include laptop {
+  .banner {
+    gap: 15px;
+    &__block-second {
+      &_info {
+        margin: 30px 0 0 8%;
+      }
+    }
+  }
+}
+
+@include tablet {
+  .banner {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 15px;
+
+    &__block-first {
+      &_info {
+        margin: 50px 0 0 6%;
+      }
+
+      &_img {
+        width: 250px;
+        height: 237px;
+        margin-top: 140px;
+      }
+    }
+
+    &__block-second {
+      overflow: hidden;
+      position: relative;
+      height: 330px;
+
+      border-radius: 10px;
+      box-shadow: 0 4px 20px 0 rgba(0, 7, 94, 0.10);
+      background: url("/images/main/banner/banner2.svg") no-repeat,url(/images/main/banner/blur-1.svg) no-repeat, url(/images/main/banner/blur-2.svg) no-repeat,linear-gradient(0deg, #1A0B73 0%, #1A0B73 100%), radial-gradient(171.82% 119.39% at -6.32% -2.5%, #42E8E0 0%, #40DDDA 0%, #3AAEC0 9.21%, #3484A9 17.3%, #2F6195 25.73%, #2B4486 34.58%, #282E79 44%, #261E71 54.25%, #24156C 65.94%, #24126A 82.26%);
+      background-position: bottom 40px right 150px,left top, right bottom;
+
+      &_name {
+        @include upper-text(36px, #fff);
+        margin-bottom: 20px;
+      }
+
+      &_desc {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      &_desc-perc {
+        font-size: 72px;
+      }
+
+      &_desc-text {
+        font-size: 20px;
+      }
+    }
+
+  }
+}
+
+
+@include mobile {
+  .banner {
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 400px 246px;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 60px;
+
+    // Баннер 1
+
+    &__block-first {
+      position: relative;
+      height: 400px;
+      flex-shrink: 0;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px 0 rgba(0, 7, 94, 0.10);
+      background: url(/images/main/banner/mobile/ellipse.svg) no-repeat,url('/images/main/banner/mobile/image.png') no-repeat,linear-gradient(74deg, #0D748B -10.13%, #1A0B73 75.49%), #FFF;
+      background-position: bottom right;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+
+
+      &_info {
+        margin: 30px 71px 0 30px;
+
+      }
+
+      &_name {
+        display: block;
+        width: 199px;
+
+        @include upper-text(22px, #FFF);
+        margin-bottom: 10px;
+      }
+
+      &_desc {
+        color: #FFF;
+        font-family: Nunito Sans, sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin-bottom: 18px;
+      }
+
+      &_btn {
+        @include white-btn(14px 26px 13px 26px, 14px);
+      }
+
+      &_img {
+        width: 146px;
+        height: 141px;
+        flex-shrink: 0;
+        margin: 7px 16px 36px 138px;
+      }
+
+      &_slider {
+        position: absolute;
+        @include slider-circle(inline-flex);
+        bottom: 20px;
+        left: 118px;
+      }
+    }
+    // Баннер 2
+    &__block-second {
+      overflow: hidden;
+      position: relative;
+      height: 246px;
+
+      border-radius: 10px;
+      box-shadow: 0 4px 20px 0 rgba(0, 7, 94, 0.10);
+      background: url("/images/main/banner/mobile/svg.svg") no-repeat,url(/images/main/banner/blur-1.svg) no-repeat, url(/images/main/banner/blur-2.svg) no-repeat,linear-gradient(0deg, #1A0B73 0%, #1A0B73 100%), radial-gradient(171.82% 119.39% at -6.32% -2.5%, #42E8E0 0%, #40DDDA 0%, #3AAEC0 9.21%, #3484A9 17.3%, #2F6195 25.73%, #2B4486 34.58%, #282E79 44%, #261E71 54.25%, #24156C 65.94%, #24126A 82.26%);
+      background-position: bottom 80px right 3px,left top, right bottom;
+
+      &_info {
+        margin: 30px 0 0 30px;
+      }
+
+      &_name {
+        @include upper-text(20px, #fff);
+        margin-bottom: 10px;
+      }
+
+      &_desc {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0;
+      }
+
+      &_desc-perc {
+        color: #FFF;
+        font-family: Nunito Sans, sans-serif;
+        font-size: 38px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
+
+      &_desc-text {
+        color: #FFF;
+        font-family: Nunito Sans, sans-serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 125%;
+      }
+
+      &_catalog {
+        position: absolute;
+        bottom: 30px;
+        right: 30px;
+        display: flex;
+        flex-direction: row;
+        stroke-width: 1px;
+      }
+
+      &_text {
+        @include catalog-text(white, 14px);
+        margin-right: 8px;
+      }
+
+      &-arrow {
+        width: 20px;
+      }
+
+    }
+  }
+}

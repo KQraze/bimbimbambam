@@ -1,0 +1,165 @@
+@mixin header1-font($color, $font-weight) {
+    color: $color;
+    font-family: Nunito Sans, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: $font-weight;
+    line-height: normal;
+}
+
+@mixin button-gradient($padding, $font-size) {
+    display: inline-flex;
+    padding: $padding;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background: linear-gradient(74deg, #0D748B -10.13%, #1A0B73 75.49%), #FFF;
+    border: none;
+    cursor: pointer;
+    
+    color: #FFF;
+    font-family: Nunito Sans, sans-serif;
+    font-size: $font-size;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        box-shadow: 0 4px 20px 0 rgba(26, 11, 115, 0.40);
+    }
+    &:disabled {
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.50) 100%), linear-gradient(74deg, #0D748B -10.13%, #1A0B73 75.49%);
+    }
+    &:active {
+        background: linear-gradient(0deg, rgba(24, 21, 75, 0.60) 0%, rgba(24, 21, 75, 0.60) 100%), linear-gradient(74deg, #0D748B -10.13%, #1A0B73 75.49%);
+    }
+
+}
+
+@mixin upper-text($font-size, $color) {
+    color: $color;
+    font-family: Nunito Sans, sans-serif;
+    font-size: $font-size;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-transform: uppercase;  
+}
+
+@mixin white-btn($padding, $font-size: 15px) {
+
+    color: $main-color;
+    font-family: Nunito Sans, sans-serif;
+    font-size: $font-size;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    cursor: pointer;
+
+    display: inline-flex;
+    padding: $padding;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background: #FFF;
+    border: none;
+
+    transition: all 0.3s ease-in-out;
+
+    &:disabled {
+        background: rgba(255, 255, 255, 0.60);
+    }
+    &:hover {
+        box-shadow: 0 4px 30px 0 rgba(255, 255, 255, 0.40);
+    }
+    &:active {
+        background: linear-gradient(0deg, rgba(24, 21, 75, 0.15) 0%, rgba(24, 21, 75, 0.15) 100%), #FFF;
+    }
+
+}
+
+@mixin catalog-text($color, $font-size: 16px) {
+    color: $color;
+    font-family: Nunito Sans, sans-serif;
+    font-size: $font-size;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+@mixin catalog-psevdclass {
+    &:disabled {
+        color: rgba(255, 255, 255, 0.60);
+        fill: rgba(255, 255, 255, 0.60);
+        stroke: rgba(255, 255, 255, 0.60);
+    }
+}
+
+@mixin advantages-text($width) {
+    display: block;
+    color: #FFF;
+    font-family: Nunito Sans, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    width: $width;
+}
+
+@mixin gradient-text($font-size) {
+    color: $main-gradient;
+    font-family: Nunito Sans ,sans-serif;
+    font-size: $font-size;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    background-image: $main-gradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@mixin company-desc($font-size: 16px) {
+    color: #303239;
+    font-family: Nunito Sans, sans-serif;
+    font-size: $font-size;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 145%; /* 23.2px */
+}
+
+@mixin footer-utext {
+    color: #B8B8B8;
+    font-family: Nunito Sans, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.32px;
+    text-transform: uppercase;
+}
+
+@mixin footer-text($color) {
+    color: $color;
+    font-family: Nunito Sans, sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    transition: all 0.2s ease-in-out;
+    &:not(:last-child) {
+        margin-bottom: 8px;
+    }
+
+    cursor: pointer;
+
+    &:hover {
+        color: #a1a1a1;
+    }
+}
+
+@mixin slider-circle($display){
+    display: $display;
+    align-items: center;
+    gap: 10px;
+}

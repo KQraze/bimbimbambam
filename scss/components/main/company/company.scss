@@ -1,0 +1,70 @@
+// О компании
+
+.company {
+    position: relative;
+    width: 100%;
+
+    margin-bottom: 80px;
+
+    &__about {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 80px;
+
+        &-info {
+            margin-right: 7%;
+        }
+
+        &-h1 {
+            @include upper-text(36px, $main-color);
+            margin: 0 0 40px 0;
+        }
+
+        &-desc {
+            @include company-desc;
+        }
+
+        &-img {
+            width: 460px;
+            height: 250px;
+            
+        }
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        
+        &-img {
+            border-radius: 50%;
+            box-shadow: 0 4px 20px rgba(0, 7, 94, 0.10);
+            margin-bottom: 15px; 
+        }
+
+        &-text {
+            @include company-desc;
+
+            &_1 {
+                width: 123px;
+            }
+            &_2 {
+                width: 128px;
+            }
+            &_3 {
+                width: 107px;
+            }
+            &_4 {
+                width: 110px;
+            }
+            &_5 {
+                width: 134px;
+            }
+            &_6 {
+                width: 139px;
+            }
+        }
+
+        
+    }
+
+}

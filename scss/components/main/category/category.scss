@@ -1,0 +1,76 @@
+.category {
+    margin: 0 0 80px 0;
+    
+    &__name {
+        @include upper-text(36px, $main-color);
+        margin-bottom: 40px;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows:  170px 170px;
+        gap: 20px;
+    }
+
+    &__block {
+        overflow: hidden;
+        display: flex;
+        height: 170px;
+        justify-content: space-between;
+        border-radius: 10px;
+        background: url(/images/main/category/ellipse.svg) no-repeat, #FFF;
+        background-position: left center;
+        box-shadow: 0 4px 20px 0 rgba(0, 7, 94, 0.10);
+
+        &-info {
+            display: flex;
+            flex-direction: column;
+            margin-top: 30px;
+            margin-right: 10%;
+        }
+
+        &-image {
+            width: 140px;
+            height: 130px;
+            flex-shrink: 0;
+            margin: 20px 0 0 10%;
+            background-size: cover;
+        }
+
+        &-name {
+            display: block;
+            width: 153px;
+            height: 70px;
+            
+            color:#303239;
+            font-family: Nunito Sans, sans-serif;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 130%; /* 23.4px */
+
+        }
+
+        &-catalog {
+            display: flex;
+            flex-direction: row;
+            margin-top: 18px;
+
+            &-name {
+                @include catalog-text($main-color);
+                margin-right: 10px;
+            }
+
+            &-arrow {
+                width: 30px;
+                flex-shrink: 0;
+
+                fill: #18154B;
+                stroke-width: 1.5px;
+                stroke: #18154B;
+            }
+
+        }
+    }
+}

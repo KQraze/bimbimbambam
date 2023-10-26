@@ -1,0 +1,74 @@
+@import "./common";
+@import "./components/headers";
+@import "./components/footer/footer";
+@import "./components/main/banner";
+@import "./components/main/category";
+@import "./components/main/advantages";
+@import "./components/main/hits";
+@import "./components/main/company";
+@import "./components/main/form";
+@import "./components/main/contacts";
+
+
+// дефолт настройки
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #F0F5FB;
+
+    * {
+        box-sizing: border-box;
+        color: black;
+    }
+
+    a {
+        display: inline-block;
+        text-decoration: none;
+    }
+
+    img {
+        max-width: 100%;
+        display: block;
+    }
+    
+    p {
+        margin: 0;
+    }
+
+    ul, li {
+        list-style-type: none;
+    }
+
+    h1 {
+        margin: 0;
+    }
+}
+
+main {
+    width: 100%;
+}
+
+@include desktop {
+    main {
+        
+    }
+}
+
+@include laptop {
+    main {
+        
+    }
+}
+
+@include tablet {
+    main {
+        
+    }
+}
+
+@include mobile {
+    main {
+        
+    }
+}
+

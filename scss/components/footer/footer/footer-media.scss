@@ -1,0 +1,158 @@
+@include desktop() {
+    footer {
+
+    }
+
+    .footer-mobile {
+        display: none;
+    }
+
+
+}
+
+@include laptop {
+    footer {
+
+    }
+
+    .footer-mobile {
+        display: none;
+    }
+
+}
+
+@include tablet {
+    footer {
+
+    }
+
+    .footer {
+        &__name {
+            margin-bottom: 20px;
+            flex-direction: row;
+            gap: 10px;
+        }
+
+        &__first-half {
+            margin-right: 4%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas:
+                    "name name"
+                    "shopper catalog";
+        }
+
+    }
+
+    .footer-mobile {
+        display: none;
+    }
+}
+
+@include mobile() {
+
+    footer {
+        height: 808px;
+        width: 100%;
+    }
+
+    .footer {
+        display: none;
+    }
+    .footer-mobile {
+        width: 320px;
+        height: 808px;
+        flex-shrink: 0;
+        padding-top: 40px;
+        padding-left: 20px;
+        display: flex;
+        flex-direction: column;
+        background: $main-color;
+    
+    
+        &__btn {
+            @include white-btn(14px 33px 13px 33px, 14px);
+            width: 180px;
+            margin-bottom: 40px;
+        }
+    
+        &__first-half {
+            display: flex;
+            flex-direction: column;
+        }
+    
+        &__name {
+            display: flex;
+            flex-direction: column;
+    
+            &-h1 {
+                @include upper-text(22px, #fff);
+                margin-bottom: 20px;
+            }
+    
+            &-copy {
+                color: #B8B8B8;
+                font-family: Nunito Sans, sans-serif;
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+        }
+    
+        &__shopper {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 40px;
+    
+            &-h1 {
+                @include footer-utext;
+                margin-bottom: 20px;
+            }
+    
+            &-list {
+                display: flex;
+                flex-direction: column;
+            }
+    
+            &-link {
+                @include footer-text(#FFF);
+            }
+        }
+        &__catalog {
+            margin-bottom: 40px;
+            &-h1 {
+                @include footer-utext;
+                margin-bottom: 20px;
+            }
+    
+            &-list {
+                display: flex;
+                flex-direction: column;
+            }
+    
+            &-link {
+                @include footer-text(#FFF);
+            }
+        }
+    
+        &__other {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-direction: column;
+    
+            &-info {
+                display: flex;
+                flex-direction: column;
+            }
+    
+            &-text {
+                @include footer-text(#B8B8B8);
+                &:last-child {
+                    margin-top: 32px; 
+                }
+            }
+        }
+}
+}
