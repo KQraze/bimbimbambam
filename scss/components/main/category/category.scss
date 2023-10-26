@@ -1,7 +1,7 @@
 .category {
     margin: 0 0 80px 0;
     
-    &__h1 {
+    &__name {
         @include upper-text(36px, $main-color);
         margin-bottom: 40px;
     }

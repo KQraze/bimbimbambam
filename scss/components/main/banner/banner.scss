@@ -7,7 +7,7 @@
     margin: 40px 0 80px 0;
 // Баннер 1
 
-    &__block1 {
+    &__block-first {
         position: relative;
         height: 440px;
         border-radius: 10px;
@@ -59,7 +59,7 @@
         }
     }
 // Баннер 2
-    &__block2 {
+    &__block-second {
         overflow: hidden;
         position: relative;
 

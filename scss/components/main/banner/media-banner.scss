@@ -1,7 +1,7 @@
 @include laptop {
   .banner {
     gap: 15px;
-    &__block2 {
+    &__block-second {
       &_info {
         margin: 30px 0 0 8%;
       }
@@ -15,7 +15,7 @@
     grid-template-rows: auto;
     gap: 15px;
 
-    &__block1 {
+    &__block-first {
       &_info {
         margin: 50px 0 0 6%;
       }
@@ -27,7 +27,7 @@
       }
     }
 
-    &__block2 {
+    &__block-second {
       overflow: hidden;
       position: relative;
       height: 330px;
@@ -71,7 +71,7 @@
 
     // Баннер 1
 
-    &__block1 {
+    &__block-first {
       position: relative;
       height: 400px;
       flex-shrink: 0;
@@ -126,7 +126,7 @@
       }
     }
     // Баннер 2
-    &__block2 {
+    &__block-second {
       overflow: hidden;
       position: relative;
       height: 246px;

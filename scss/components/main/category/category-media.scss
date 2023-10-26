@@ -1,7 +1,7 @@
 @include laptop {
     .category {
 
-        &__h1 {
+        &__name {
             @include upper-text(35px, $main-color);
         }
         &__block {
