@@ -46,14 +46,14 @@ inputFile.addEventListener("change", async (e) => {
 clearForm.addEventListener("click", (e) => {
     e.preventDefault();
     // Скрываем форму
-    divForm.setAttribute("style", 'display: none')
+    divForm.setAttribute("style", 'display: none');
     // Очищаем её
-    createForm(formCreate, empty);
+    setTimeout(createForm, 1, formCreate, empty);
     formCreate.innerHTML = "";
     // Возвращаем input file
-    inputFile.setAttribute("style", 'display: inherit')
+    inputFile.setAttribute("style", 'display: inherit');
     // Убираем кнопку очистки формы
-    clearForm.setAttribute("style", 'display: none')
+    clearForm.setAttribute("style", 'display: none');
 })
 
 // Создание формы
