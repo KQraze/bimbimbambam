@@ -1,0 +1,17 @@
+.header {
+  width: 100%;
+  background: #ffb049;
+  height: 3em;
+  display: flex;
+  align-items: center;
+  padding-left: 5%;
+
+
+  &__name {
+    color: white;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+
+  }
+
+}
