@@ -11,5 +11,5 @@
 </template>
 
 <style scoped>
-  @import "header.scss";
+  @import "header.module.scss";
 </style>
