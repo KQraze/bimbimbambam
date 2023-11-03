@@ -1,17 +1,25 @@
 .header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
   width: 100%;
   background: #ffb049;
   height: 3em;
   display: flex;
   align-items: center;
-  padding-left: 5%;
+  padding-left: 2%;
+
 
 
   &__name {
     color: white;
     font-family: Arial, sans-serif;
     font-weight: bold;
+  }
 
+  &__icon {
+    margin-right: 3px;
+    border: 1.5px solid white;
   }
 
 }
