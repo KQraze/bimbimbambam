@@ -1,6 +1,7 @@
-main {
+.main {
   color: $primary-color;
   padding: 0 2% 0 2%;
+  font-family: Verdana, sans-serif;
 }
 
 .news {
@@ -12,10 +13,10 @@ main {
     display: flex;
     width: 100%;
     background: #fffbf8;
-    padding: 3px 2px;
-
+    padding: 6px 2px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.07);
     align-items: center;
+
 
     &-link {
       color: $grey-color;
@@ -33,9 +34,9 @@ main {
 
     &-name {
       white-space: nowrap;
-      text-overflow: ellipsis;
       font-size: 0.95em;
       cursor: pointer;
+      text-overflow: ellipsis;
     }
 
     &-top {
@@ -44,6 +45,7 @@ main {
       column-gap: 3px;
       align-items: center;
       margin-bottom: 2px;
+
     }
     
     &-bottom {

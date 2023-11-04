@@ -3,13 +3,17 @@
   top: 0;
   z-index: 1;
   width: 100%;
-  background: #ffb049;
+  background: #f60;
   height: 3em;
   display: flex;
   align-items: center;
   padding-left: 2%;
 
-
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
 
   &__name {
     color: white;
@@ -18,7 +22,6 @@
   }
 
   &__icon {
-    margin-right: 3px;
     border: 1.5px solid white;
   }
 

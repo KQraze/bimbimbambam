@@ -1,12 +1,11 @@
 <script setup>
-  import Header from "@/components/header/header.vue";
 
 </script>
 
 <template>
-  <Header />
+
 </template>
 
 <style scoped>
-
+  @import "postComments.module.scss";
 </style>
