@@ -6,7 +6,7 @@
   overflow: hidden;
   width: 100%;
   background: #fffbf8;
-  padding: 6px 16px;
+  padding: 16px 16px;
   font-family: Verdana, sans-serif;
 
 
@@ -28,7 +28,6 @@
   }
 
   &__title {
-    white-space: nowrap;
     font-size: 0.95em;
     cursor: pointer;
     text-overflow: ellipsis;

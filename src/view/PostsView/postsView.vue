@@ -3,15 +3,24 @@
   import PostInfo from "@/components/postPage/postInfo/postInfo.vue";
   import PostComments from "@/components/postPage/postComments/postComments.vue";
   import ResetButton from "@/components/ResetButton.vue";
+  import { ref } from "vue";
+
+
+  const count = ref(0)
+  const iteration = () => {
+    count.value++
+  }
+
+  setInterval(iteration, 60000)
 
 </script>
 
 <template>
   <Header />
-  <resetButton>Обновить комментарии</resetButton>
+  <resetButton @click="iteration">Обновить комментарии</resetButton>
   <main class="post">
     <postInfo />
-    <postComments />
+    <postComments :key="count" />
   </main>
 
 </template>

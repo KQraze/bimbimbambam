@@ -1,0 +1,37 @@
+.post-comments {
+  padding: 4px 16px;
+  background: #fffbf8;
+  font-family: Verdana, sans-serif;
+  border-left: 1px solid rgba(0, 0, 0, 0.07);
+  border-right: 1px solid rgba(0, 0, 0, 0.07);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+
+  &__name {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+  }
+}
+
+.post-comment {
+  margin-bottom: 10px;
+
+  &__top {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 8px;
+    font-size: 0.8em;
+    color: $grey-color;
+    margin-bottom: 3px;
+  }
+
+  &__bottom {
+    margin-bottom: 5px;
+  }
+
+  &__text {
+    font-size: 0.9em;
+    text-overflow: ellipsis;
+    line-height: 20px;
+  }
+}
