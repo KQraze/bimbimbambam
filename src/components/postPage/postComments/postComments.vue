@@ -1,6 +1,6 @@
 <script setup>
 
-import { onMounted, ref } from "vue";
+import {onMounted, reactive, ref} from "vue";
   import { useRoute } from "vue-router";
   import axios from "axios";
 
@@ -23,7 +23,21 @@ import { onMounted, ref } from "vue";
 
       buff.data.date = time.toLocaleString();
 
-      comments.value.push(buff.data)
+      buff.data.answers = [];
+      buff.data.show = false;
+
+      buff.data.kids ? buff.data.kids.map( async (data) => {
+        const answer = await axios.get(`https://hacker-news.firebaseio.com/v0/item/${data}.json?print=pretty`)
+
+        let time;
+        time = new Date(answer.data.time * 1000);
+
+        answer.data.date = time.toLocaleString();
+
+        buff.data.answers.push(answer.data)
+      }) : null
+
+      comments.value.push(reactive(buff.data))
     })
   })
 </script>
@@ -53,6 +67,39 @@ import { onMounted, ref } from "vue";
 
       <article class="post-comment__bottom">
         <span class="post-comment__text" v-html="comment.text"></span>
+        <span
+            class="post-comment__show"
+            @click="comment.show = !comment.show"
+        >
+          <span v-if="comment.show === false">Show replies</span>
+          <span v-else>Hide replies</span>
+        </span>
+        <section
+            class="post-comment__answers"
+            v-show="comment.show !== false"
+        >
+          <article class="post-comment"
+                   v-for="answer in comment.answers"
+                   :key="answer.id"
+          >
+            <article class="post-comment__top">
+              <span class="post-comment__by">{{answer.by}}</span>
+              <span class="post-comment__date">{{answer.date}}</span>
+              <span
+                    class="post-comment__count"
+                    v-if="answer.kids"
+              >
+                [{{answer.kids.length}}
+                <span v-if="answer.kids.length === 1">reply</span>
+                <span v-else>replies</span>]
+              </span>
+            </article>
+            <article class="post-comment__bottom">
+              <span class="post-comment__text" v-html="answer.text"></span>
+            </article>
+          </article>
+        </section>
+
       </article>
     </article>
   </section>

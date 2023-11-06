@@ -19,7 +19,7 @@
   <Header />
   <resetButton @click="iteration">Обновить комментарии</resetButton>
   <main class="post">
-    <postInfo />
+    <postInfo :key="count"/>
     <postComments :key="count" />
   </main>
 

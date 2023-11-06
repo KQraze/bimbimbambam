@@ -8,30 +8,48 @@
 
 <style scoped lang="scss">
   .news__reset {
-    position: fixed;
-    z-index: 2;
-    top: 12px;
-    right: 2%;
-
-    outline: none;
-    border: none;
-    border-radius: 10px;
-    padding: 5px 10px;
-    background: #ffffff;
-
-    cursor: pointer;
     font-family: Verdana, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    padding: 6px 6px;
+    position: fixed;
 
-    transition:
-      background 0.1s ease-in-out,
-      box-shadow 0.1s ease-in-out;
+    top: 10.5px;
+    right: 14px;
+    z-index: 3;
+
+    overflow: hidden;
+    border: none;
+    border-radius: 8px;
+    color: #fe6637;
+    transition: .2s ease-in-out;
+
+    &:before {
+      content: "";
+      background: linear-gradient(90deg, rgba(255, 255, 255, .2), rgba(255, 255, 255, .6));
+      height: 50px;
+      width: 50px;
+      position: absolute;
+      top: -8px;
+      left: -75px;
+      transform: skewX(-45deg);
+    }
+
+    &:active {
+      background: #7e4300;
+      transition: .1s ease-in-out;
+    }
 
     &:hover {
-      background: #ffe9db;
-      box-shadow: 0 0 6px 0 #ffe9db;
+      background: #ff6937;
+      color: #fff;
     }
-    &:active {
-      background-color: #fff2d8;
+
+    &:hover:before {
+      left: 200px;
+      transition: .7s ease-in-out;
     }
-  }
+    }
 </style>

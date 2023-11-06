@@ -16,6 +16,11 @@
 .post-comment {
   margin-bottom: 10px;
 
+  &__answers {
+    margin-top: 5px;
+    margin-left: 3%;
+  }
+
   &__top {
     display: flex;
     flex-wrap: wrap;
@@ -27,11 +32,29 @@
 
   &__bottom {
     margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
   }
 
   &__text {
     font-size: 0.9em;
     text-overflow: ellipsis;
     line-height: 20px;
+  }
+
+  &__show {
+    color: $grey-color;
+    width: 90px;
+    font-size: 0.8em;
+    cursor: pointer;
+    margin-left: 2px;
+    text-align: center;
+
+    border-bottom: 1.4px dashed $grey-color;
+
+    &:active {
+      color: $primary-color;
+    }
   }
 }
