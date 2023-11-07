@@ -19,18 +19,11 @@
       let time;
       time = new Date(buff.data.time * 1000);
 
-
       buff.data.date = time.toLocaleString();
 
       posts.value.push(buff.data)
     })
-
-    posts.value.sort((a, b) => b.time - a.time)
   })
-
-
-
-
 </script>
 
 <template>

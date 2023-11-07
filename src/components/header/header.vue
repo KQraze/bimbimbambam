@@ -10,6 +10,8 @@
       <span class="header__name">Hacker News</span>
     </router-link>
 
+    
+
   </header>
 </template>
 

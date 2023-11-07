@@ -3,6 +3,7 @@
 import {onMounted, reactive, ref} from "vue";
   import { useRoute } from "vue-router";
   import axios from "axios";
+import answersTree from "@/components/postPage/postComments/answersTree/answersTree.vue";
 
   const comNum = ref(null)
 
@@ -15,30 +16,17 @@ import {onMounted, reactive, ref} from "vue";
 
     comNum.value = data.data.kids
 
-    comNum.value.map( async (data) => {
+    comNum ? comNum.value.map( async (data) => {
       const buff = await axios.get(`https://hacker-news.firebaseio.com/v0/item/${data}.json?print=pretty`)
 
       let time;
       time = new Date(buff.data.time * 1000);
 
       buff.data.date = time.toLocaleString();
-
-      buff.data.answers = [];
       buff.data.show = false;
 
-      buff.data.kids ? buff.data.kids.map( async (data) => {
-        const answer = await axios.get(`https://hacker-news.firebaseio.com/v0/item/${data}.json?print=pretty`)
-
-        let time;
-        time = new Date(answer.data.time * 1000);
-
-        answer.data.date = time.toLocaleString();
-
-        buff.data.answers.push(answer.data)
-      }) : null
-
       comments.value.push(reactive(buff.data))
-    })
+    }) : null
   })
 </script>
 
@@ -74,32 +62,10 @@ import {onMounted, reactive, ref} from "vue";
           <span v-if="comment.show === false">Show replies</span>
           <span v-else>Hide replies</span>
         </span>
-        <section
-            class="post-comment__answers"
-            v-show="comment.show !== false"
-        >
-          <article class="post-comment"
-                   v-for="answer in comment.answers"
-                   :key="answer.id"
-          >
-            <article class="post-comment__top">
-              <span class="post-comment__by">{{answer.by}}</span>
-              <span class="post-comment__date">{{answer.date}}</span>
-              <span
-                    class="post-comment__count"
-                    v-if="answer.kids"
-              >
-                [{{answer.kids.length}}
-                <span v-if="answer.kids.length === 1">reply</span>
-                <span v-else>replies</span>]
-              </span>
-            </article>
-            <article class="post-comment__bottom">
-              <span class="post-comment__text" v-html="answer.text"></span>
-            </article>
-          </article>
-        </section>
-
+        <answersTree
+            v-if="comment.show !== false"
+            :kidsId="comment.kids ? comment.kids : []"
+        />
       </article>
     </article>
   </section>
