@@ -13,7 +13,7 @@
 .post-comment {
 
   &_parent {
-    margin-bottom: 10px ;
+    margin-bottom: 20px ;
   }
 
   &__answers {
@@ -64,7 +64,9 @@
 
   }
   .post-comment {
-
+    &_parent {
+      margin-bottom: 20px ;
+    }
   }
 }
 
@@ -92,7 +94,7 @@
   }
   .post-comment {
     &_parent {
-      margin-bottom: 8px ;
+      margin-bottom: 18px ;
     }
 
     &__answers {
@@ -139,7 +141,7 @@
   }
   .post-comment {
     &_parent {
-      margin-bottom: 6px ;
+      margin-bottom: 16px ;
     }
 
     &__answers {
