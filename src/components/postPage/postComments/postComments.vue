@@ -16,7 +16,7 @@ import answersTree from "@/components/postPage/postComments/answersTree/answersT
 
     comNum.value = data.data.kids
 
-    comNum ? comNum.value.map( async (data) => {
+    comNum.value.map( async (data) => {
       const buff = await axios.get(`https://hacker-news.firebaseio.com/v0/item/${data}.json?print=pretty`)
 
       let time;
@@ -26,7 +26,7 @@ import answersTree from "@/components/postPage/postComments/answersTree/answersT
       buff.data.show = false;
 
       comments.value.push(reactive(buff.data))
-    }) : null
+    })
   })
 </script>
 
@@ -36,7 +36,7 @@ import answersTree from "@/components/postPage/postComments/answersTree/answersT
   >
     <h1 class="post-comments__name">Comments:</h1>
 
-    <article class="post-comment"
+    <article class="post-comment post-comment_parent"
              v-for="comment in comments"
              :key="comment.id"
     >

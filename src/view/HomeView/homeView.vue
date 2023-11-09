@@ -14,8 +14,10 @@ import ResetButton from "@/components/ResetButton.vue";
 </script>
 
 <template>
-  <Header />
-  <ResetButton @click="interval">Обновить список</ResetButton>
+  <Header>
+    <ResetButton @click="interval">Обновить список</ResetButton>
+  </Header>
+
   <listNews :key="listNewsKey"/>
 </template>
 

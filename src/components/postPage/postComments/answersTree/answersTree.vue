@@ -1,7 +1,6 @@
 <script setup>
 import {defineProps, onMounted, reactive, ref} from 'vue'
   import axios from "axios";
-import Buff from "@/components/postPage/postComments/answersTree/buff.vue";
 
   const { kidsId } = defineProps({
     kidsId: Array,
@@ -46,7 +45,7 @@ import Buff from "@/components/postPage/postComments/answersTree/buff.vue";
               </article>
               <article class="post-comment__bottom">
                 <span class="post-comment__text" v-html="answer.text"></span>
-                <buff
+                <answers-tree
                   :kidsId="answer.kids ? answer.kids : []"
                 />
               </article>

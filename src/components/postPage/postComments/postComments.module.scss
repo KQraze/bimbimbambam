@@ -1,10 +1,7 @@
 .post-comments {
-  padding: 4px 16px;
-  background: #fffbf8;
-  font-family: Verdana, sans-serif;
-  border-left: 1px solid rgba(0, 0, 0, 0.07);
-  border-right: 1px solid rgba(0, 0, 0, 0.07);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+  font-family: $primary-family;
+  box-sizing: border-box;
+  padding: 0 10px 10px 10px;
 
   &__name {
     margin-top: 10px;
@@ -14,7 +11,10 @@
 }
 
 .post-comment {
-  margin-bottom: 10px;
+
+  &_parent {
+    margin-bottom: 10px ;
+  }
 
   &__answers {
     margin-top: 5px;
@@ -54,7 +54,120 @@
     border-bottom: 1.4px dashed $grey-color;
 
     &:active {
-      color: $primary-color;
+      color: black;
+    }
+  }
+}
+
+@include desktop {
+  .post-comments {
+
+  }
+  .post-comment {
+
+  }
+}
+
+@include desk-to-tab {
+  .post-comments {
+
+  }
+  .post-comment {
+
+  }
+}
+
+@include tablet {
+  .post-comments {
+    padding: 0 8px 8px 8px;
+
+
+
+    &__name {
+      margin-top: 8px;
+      margin-bottom: 8px;
+      font-size: 0.8em;
+    }
+
+  }
+  .post-comment {
+    &_parent {
+      margin-bottom: 8px ;
+    }
+
+    &__answers {
+      margin-top: 4px;
+      margin-left: 2.5%;
+    }
+
+    &__top {
+      column-gap: 7px;
+      font-size: 0.75em;
+      margin-bottom: 2.5px;
+    }
+
+    &__bottom {
+      margin-bottom: 4px;
+      gap: 4px;
+    }
+
+    &__text {
+      font-size: 0.85em;
+      line-height: 18px;
+    }
+
+    &__show {
+      width: 80px;
+      font-size: 0.75em;
+      margin-left: 2px;
+      border-bottom: 1.4px dashed $grey-color;
+    }
+  }
+}
+
+@include mobile {
+  .post-comments {
+    padding: 0 6px 6px 6px;
+
+
+
+    &__name {
+      margin-top: 6px;
+      margin-bottom: 6px;
+      font-size: 0.75em;
+    }
+  }
+  .post-comment {
+    &_parent {
+      margin-bottom: 6px ;
+    }
+
+    &__answers {
+      margin-top: 3.5px;
+      margin-left: 2%;
+    }
+
+    &__top {
+      column-gap: 6px;
+      font-size: 0.7em;
+      margin-bottom: 2px;
+    }
+
+    &__bottom {
+      margin-bottom: 3px;
+      gap: 3px;
+    }
+
+    &__text {
+      font-size: 0.75em;
+      line-height: 16px;
+    }
+
+    &__show {
+      width: 75px;
+      font-size: 0.7em;
+      margin-left: 2px;
+      border-bottom: 1.4px dashed $grey-color;
     }
   }
 }
