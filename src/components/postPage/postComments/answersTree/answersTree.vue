@@ -54,5 +54,5 @@ import {defineProps, onMounted, reactive, ref} from 'vue'
 </template>
 
 <style scoped>
-  @import "../postComments.module.scss";
+  @import "../postComments.scss";
 </style>

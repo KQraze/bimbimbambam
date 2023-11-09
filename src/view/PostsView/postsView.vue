@@ -17,11 +17,11 @@
 
 <template>
   <Header />
-  <resetButton @click="iteration">Обновить комментарии</resetButton>
+  <reset-button @click="iteration">Обновить комментарии</reset-button>
   <main class="post">
     <div class="container post__container">
-      <postInfo :key="count"/>
-      <postComments :key="count" />
+      <post-info :key="count"/>
+      <post-comments :key="count" />
     </div>
   </main>
 

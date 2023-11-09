@@ -1,26 +1,26 @@
 <script setup>
-  import axios from "axios";
   import { onMounted, ref } from "vue";
+  import {NewsService} from "@/services/get.services";
 
-  const newsNum = ref(null);
+  const newsIndex = ref(null);
 
   const posts = ref([])
 
   onMounted(async () => {
 
-    const numbers = await axios.get('https://hacker-news.firebaseio.com/v0/newstories.json')
-    newsNum.value = numbers.data.slice(0, 100)
+    const numbers = await NewsService.getIndexNews()
+    newsIndex.value = numbers.slice(0, 100)
 
-    newsNum.value.map(async (data) => {
-      const buff = await axios.get(`https://hacker-news.firebaseio.com/v0/item/${data}.json`);
+    newsIndex.value.map(async (data) => {
+      const post = await NewsService.getNews(data);
 
-      buff.data.url ? buff.data.link = buff.data.url.split('/')[2] : " "
+      post.url ? post.link = post.url.split('/')[2] : " "
 
       let time;
-      time = new Date(buff.data.time * 1000);
+      time = new Date(post.time * 1000);
 
-      buff.data.date = time.toLocaleString();
-      posts.value.push(buff.data)
+      post.date = time.toLocaleString();
+      posts.value.push(post)
 
       posts.value.sort((a, b) => {return (a.date - b.date)})
     })
@@ -55,5 +55,5 @@
 </template>
 
 <style scoped lang="scss">
-  @import "listNews.module.scss";
+  @import "listNews";
 </style>

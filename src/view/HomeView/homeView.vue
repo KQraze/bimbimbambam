@@ -15,10 +15,10 @@ import ResetButton from "@/components/ResetButton.vue";
 
 <template>
   <Header>
-    <ResetButton @click="interval">Обновить список</ResetButton>
+    <reset-button @click="interval">Обновить список</reset-button>
   </Header>
 
-  <listNews :key="listNewsKey"/>
+  <list-news :key="listNewsKey"/>
 </template>
 
 <style scoped lang="scss">

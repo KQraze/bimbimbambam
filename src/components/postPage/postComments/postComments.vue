@@ -2,30 +2,30 @@
 
 import {onMounted, reactive, ref} from "vue";
   import { useRoute } from "vue-router";
-  import axios from "axios";
+  import {NewsService} from "@/services/get.services";
 import answersTree from "@/components/postPage/postComments/answersTree/answersTree.vue";
 
-  const comNum = ref(null)
+  const comIndex = ref(null)
 
   const comments = ref([])
 
   onMounted(async () => {
     const Route = useRoute()
     const id = Route.params.id
-    const data = await axios.get(`https://hacker-news.firebaseio.com/v0/item/${id}.json?print=pretty`)
+    const data = await NewsService.getNews(id)
 
-    comNum.value = data.data.kids
+    comIndex.value = data.kids
 
-    comNum.value.map( async (data) => {
-      const buff = await axios.get(`https://hacker-news.firebaseio.com/v0/item/${data}.json?print=pretty`)
+    comIndex.value.map( async (data) => {
+      const comment = await NewsService.getNews(data)
 
       let time;
-      time = new Date(buff.data.time * 1000);
+      time = new Date(comment.time * 1000);
 
-      buff.data.date = time.toLocaleString();
-      buff.data.show = false;
+      comment.date = time.toLocaleString();
+      comment.show = false;
 
-      comments.value.push(reactive(buff.data))
+      comments.value.push(reactive(comment))
     })
   })
 </script>
@@ -62,7 +62,7 @@ import answersTree from "@/components/postPage/postComments/answersTree/answersT
           <span v-if="comment.show === false">Show replies</span>
           <span v-else>Hide replies</span>
         </span>
-        <answersTree
+        <answers-tree
             v-if="comment.show !== false"
             :kidsId="comment.kids ? comment.kids : []"
         />
@@ -72,5 +72,5 @@ import answersTree from "@/components/postPage/postComments/answersTree/answersT
 </template>
 
 <style scoped>
-  @import "postComments.module.scss";
+  @import "postComments.scss";
 </style>

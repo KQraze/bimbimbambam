@@ -45,5 +45,5 @@ import { useRoute } from "vue-router";
 </template>
 
 <style scoped>
-  @import "postInfo.module.scss";
+  @import "postInfo.scss";
 </style>
