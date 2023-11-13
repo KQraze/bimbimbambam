@@ -13,7 +13,6 @@
 
     newsIndex.value.map(async (data) => {
       const post = await NewsService.getNews(data);
-
       post.url ? post.link = post.url.split('/')[2] : " "
 
       let time;
