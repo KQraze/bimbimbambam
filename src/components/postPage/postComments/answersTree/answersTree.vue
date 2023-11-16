@@ -1,6 +1,7 @@
 <script setup>
 import {defineProps, onMounted, reactive, ref} from 'vue'
   import axios from "axios";
+import {NewsService} from "@/services/get.services";
 
   const { kidsId } = defineProps({
     kidsId: Array,
@@ -10,15 +11,16 @@ import {defineProps, onMounted, reactive, ref} from 'vue'
 
   onMounted(async () => {
 
-    kidsId.map(async (id) => {
-      const answer = await axios.get(`https://hacker-news.firebaseio.com/v0/item/${id}.json?print=pretty`)
+    kidsId.map(async (data) => {
+
+      const answer = await NewsService.getNews(data);
 
       let time;
-      time = new Date(answer.data.time * 1000);
-      answer.data.date = time.toLocaleString();
-      answer.data.show = false;
+      time = new Date(answer.time * 1000);
+      answer.date = time.toLocaleString();
+      answer.show = false;
 
-      answers.value.push(reactive(answer.data))
+      answers.value.push(reactive(answer))
     })
   })
 </script>
