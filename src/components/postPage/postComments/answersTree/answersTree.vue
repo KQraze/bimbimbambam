@@ -1,6 +1,5 @@
 <script setup>
 import {defineProps, onMounted, reactive, ref} from 'vue'
-  import axios from "axios";
 import {NewsService} from "@/services/get.services";
 
   const { kidsId } = defineProps({

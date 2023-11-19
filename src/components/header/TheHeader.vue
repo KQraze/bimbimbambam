@@ -18,5 +18,5 @@
 </template>
 
 <style scoped>
-  @import "header.scss";
+  @import "TheHeader.scss";
 </style>

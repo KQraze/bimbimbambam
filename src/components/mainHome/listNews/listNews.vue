@@ -41,7 +41,11 @@
             <span class="news__new-score">{{post.score}} score</span>
             <span class="news__new-by">by {{post.by}}</span>
             <span class="news__new-time">{{post.date}}</span>
-            <router-link :to="{ name: 'post', params: { id: post.id} }" class="news__new-comments">{{post.descendants}}
+            <router-link
+              :to="{ name: 'post', params: { id: post.id} }"
+              class="news__new-comments"
+            >
+              {{post.descendants}}
               <span v-if="post.descendants === 0 || post.descendants === 1">comment</span>
               <span v-else>comments</span>
             </router-link>

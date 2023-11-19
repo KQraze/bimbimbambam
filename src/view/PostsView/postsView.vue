@@ -1,5 +1,5 @@
 <script setup>
-  import Header from "@/components/header/header.vue";
+  import Header from "@/components/header/TheHeader.vue";
   import PostInfo from "@/components/postPage/postInfo/postInfo.vue";
   import PostComments from "@/components/postPage/postComments/postComments.vue";
   import ResetButton from "@/components/ResetButton.vue";

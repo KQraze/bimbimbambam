@@ -1,5 +1,5 @@
 <script setup>
-import Header from "@/components/header/header.vue";
+import Header from "@/components/header/TheHeader.vue";
 import ListNews from "@/components/mainHome/listNews/listNews.vue";
 import { ref } from "vue";
 import ResetButton from "@/components/ResetButton.vue";
