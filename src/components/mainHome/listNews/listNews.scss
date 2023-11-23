@@ -1,0 +1,159 @@
+.main {
+  font-family: $primary-family;
+}
+
+.news {
+  border: 3px solid rgba(255, 228, 200, 0.26);
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 0 8px 0 rgba(203, 178, 148, 0.48);
+
+  &__name {
+    font-size: 38px;
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  &__new {
+    overflow: hidden;
+    display: flex;
+    width: 100%;
+    background: linear-gradient(236deg, rgba(255,235,222,1) 0%, rgba(255,255,255,1) 100%);
+    padding: 12px 10px;
+    align-items: center;
+    box-shadow: 4px 0 4px 0 rgba(134, 134, 134, 0.3);
+
+    &-name {
+      font-size: 1.1em;
+      cursor: pointer;
+      text-overflow: ellipsis;
+    }
+
+    &-link {
+      color: $grey-color;
+      font-size: 0.8em;
+    }
+
+    &-top {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 3px;
+      row-gap: 2px;
+      align-items: center;
+      margin-bottom: 3px;
+
+    }
+    
+    &-bottom {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 8px;
+      row-gap: 2px;
+      font-size: 0.8em;
+      color: $grey-color;
+    }
+
+    &-comments {
+      color: $grey-color;
+    }
+
+  }
+}
+
+@include desktop {
+  .main {
+
+  }
+}
+
+@include desk-to-tab {
+  .main {
+    padding: 0 1%;
+  }
+}
+
+@include tablet {
+  .main {
+  }
+  .news {
+    border: 2.5px solid rgba(255, 228, 200, 0.26);
+    border-radius: 18px;
+    box-shadow: 0 0 6px 0 rgba(203, 178, 148, 0.48);
+
+    &__name {
+      font-size: 32px;
+      margin: 8px 0 8px 0;
+    }
+
+    &__new {
+      padding: 11px 9px;
+
+      &-link {
+        font-size: 0.75em;
+      }
+
+      &-name {
+        font-size: 1em;
+      }
+
+      &-top {
+        column-gap: 2.5px;
+        row-gap: 1.75px;
+        margin-bottom: 1.75px;
+      }
+
+      &-bottom {
+        column-gap: 7px;
+        font-size: 0.75em;
+      }
+
+
+    }
+  }
+}
+
+@include mobile {
+  .main {
+  }
+
+  .news {
+    border: 2.2px solid rgba(255, 228, 200, 0.26);
+    border-radius: 16px;
+    box-shadow: 0 0 4px 0 rgba(203, 178, 148, 0.48);
+
+    &__name {
+      font-size: 22px;
+      margin: 7px 0 7px 0;
+    }
+
+    &__new {
+      padding: 9px 7px;
+
+      &-link {
+        font-size: 0.7em;
+      }
+
+      &-name {
+        font-size: 0.9em;
+      }
+
+      &-top {
+        column-gap: 2.2px;
+        row-gap: 1.5px;
+        margin-bottom: 1.5px;
+      }
+
+      &-bottom {
+        column-gap: 6px;
+        font-size: 0.7em;
+      }
+
+
+    }
+  }
+}

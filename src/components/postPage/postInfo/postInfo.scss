@@ -1,0 +1,104 @@
+.post-info {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: $primary-family;
+  box-sizing: border-box;
+  padding: 0 10px 10px 10px;
+
+
+  &__top {
+    display: flex;
+    align-items: center;
+    column-gap: 3px;
+    row-gap: 2px;
+    flex-wrap: wrap;
+    margin-bottom: 5px;
+  }
+
+  &__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 8px;
+    row-gap: 2px;
+    font-size: 0.8em;
+    color: $grey-color;
+  }
+
+  &__title {
+    font-size: 1.1em;
+    cursor: pointer;
+    text-overflow: ellipsis;
+  }
+
+  &__link {
+    color: $grey-color;
+    font-size: 0.8em;
+  }
+
+}
+
+@include desktop {
+.post-info {
+
+  }
+}
+
+@include desk-to-tab {
+  .post-info {
+
+  }
+}
+@include tablet {
+  .post-info {
+    padding: 0 8px 8px 8px;
+
+    &-top {
+      column-gap: 2.5px;
+      row-gap: 1.75px;
+      margin-bottom: 1.75px;
+
+    }
+
+    &-bottom {
+      column-gap: 7px;
+      font-size: 0.7em;
+    }
+
+    &-title {
+      font-size: 1em;
+    }
+
+    &-link {
+      font-size: 0.75em;
+    }
+  }
+}
+@include mobile {
+  .post-info {
+    padding: 0 6px 6px 6px;
+
+    &__title {
+      font-size: 0.9em;
+    }
+
+    &-top {
+      column-gap: 2.2px;
+      row-gap: 1.5px;
+      margin-bottom: 1.5px;
+    }
+
+    &-bottom {
+      column-gap: 6px;
+      font-size: 0.7em;
+    }
+
+    &-title {
+      font-size: 0.9em;
+    }
+
+    &-link {
+      font-size: 0.7em;
+    }
+  }
+}
